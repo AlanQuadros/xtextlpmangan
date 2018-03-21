@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ShellscriptParsingTest" project="org.xtext.example.sh.tests" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="org.xtext.example.sh.tests.ShellscriptParsingTest" time="0.123">
+    <testcase name="loadModel" classname="org.xtext.example.sh.tests.ShellscriptParsingTest" time="0.123"/>
+  </testsuite>
+</testrun>
