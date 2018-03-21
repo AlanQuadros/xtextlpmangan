@@ -6,7 +6,6 @@ package org.xtext.example.sh.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
-import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
@@ -40,70 +39,61 @@ public class ShellscriptGrammarAccess extends AbstractGrammarElementFinder {
 	public class GreetingElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.sh.Shellscript.Greeting");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDollarSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cExpressionAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cExpressionExpressionParserRuleCall_3_0 = (RuleCall)cExpressionAssignment_3.eContents().get(0);
+		private final Keyword cIfKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameASPASTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
+		////Greeting:
+		////	name=ID '=' expression=Expression;
+		////
+		////Expression:
+		////	INT | '$'ID;
 		//Greeting:
-		//	'$' name=ID '=' expression=Expression;
+		//	'if' '[' name=ASPAS;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'$' name=ID '=' expression=Expression
+		//'if' '[' name=ASPAS
+		public Group getGroup() { return cGroup; }
+		
+		//'if'
+		public Keyword getIfKeyword_0() { return cIfKeyword_0; }
+		
+		//'['
+		public Keyword getLeftSquareBracketKeyword_1() { return cLeftSquareBracketKeyword_1; }
+		
+		//name=ASPAS
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//ASPAS
+		public RuleCall getNameASPASTerminalRuleCall_2_0() { return cNameASPASTerminalRuleCall_2_0; }
+	}
+	public class ExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.sh.Shellscript.Expression");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDollarSignKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		
+		////	 '$'name=ID '"' -gt' value=INT ']'
+		//Expression:
+		//	'$' ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'$' ID
 		public Group getGroup() { return cGroup; }
 		
 		//'$'
 		public Keyword getDollarSignKeyword_0() { return cDollarSignKeyword_0; }
 		
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-		
-		//'='
-		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
-		
-		//expression=Expression
-		public Assignment getExpressionAssignment_3() { return cExpressionAssignment_3; }
-		
-		//Expression
-		public RuleCall getExpressionExpressionParserRuleCall_3_0() { return cExpressionExpressionParserRuleCall_3_0; }
-	}
-	public class ExpressionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.sh.Shellscript.Expression");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cDollarSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
-		
-		//Expression:
-		//	INT | '$' ID;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//INT | '$' ID
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//INT
-		public RuleCall getINTTerminalRuleCall_0() { return cINTTerminalRuleCall_0; }
-		
-		//'$' ID
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//'$'
-		public Keyword getDollarSignKeyword_1_0() { return cDollarSignKeyword_1_0; }
-		
-		//ID
-		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
 	}
 	
 	
 	private final ModelElements pModel;
 	private final GreetingElements pGreeting;
 	private final ExpressionElements pExpression;
+	private final TerminalRule tASPAS;
 	
 	private final Grammar grammar;
 	
@@ -117,6 +107,7 @@ public class ShellscriptGrammarAccess extends AbstractGrammarElementFinder {
 		this.pModel = new ModelElements();
 		this.pGreeting = new GreetingElements();
 		this.pExpression = new ExpressionElements();
+		this.tASPAS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.sh.Shellscript.ASPAS");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -156,8 +147,13 @@ public class ShellscriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 	
+	////Greeting:
+	////	name=ID '=' expression=Expression;
+	////
+	////Expression:
+	////	INT | '$'ID;
 	//Greeting:
-	//	'$' name=ID '=' expression=Expression;
+	//	'if' '[' name=ASPAS;
 	public GreetingElements getGreetingAccess() {
 		return pGreeting;
 	}
@@ -166,14 +162,21 @@ public class ShellscriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getGreetingAccess().getRule();
 	}
 	
+	////	 '$'name=ID '"' -gt' value=INT ']'
 	//Expression:
-	//	INT | '$' ID;
+	//	'$' ID;
 	public ExpressionElements getExpressionAccess() {
 		return pExpression;
 	}
 	
 	public ParserRule getExpressionRule() {
 		return getExpressionAccess().getRule();
+	}
+	
+	//terminal ASPAS:
+	//	'"';
+	public TerminalRule getASPASRule() {
+		return tASPAS;
 	}
 	
 	//terminal ID:

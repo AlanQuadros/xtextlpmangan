@@ -105,22 +105,13 @@ public interface ShellscriptPackage extends EPackage
   int GREETING__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Expression</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GREETING__EXPRESSION = 1;
-
-  /**
    * The number of structural features of the '<em>Greeting</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 2;
+  int GREETING_FEATURE_COUNT = 1;
 
 
   /**
@@ -164,17 +155,6 @@ public interface ShellscriptPackage extends EPackage
    * @generated
    */
   EAttribute getGreeting_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.sh.shellscript.Greeting#getExpression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Expression</em>'.
-   * @see org.xtext.example.sh.shellscript.Greeting#getExpression()
-   * @see #getGreeting()
-   * @generated
-   */
-  EAttribute getGreeting_Expression();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -234,14 +214,6 @@ public interface ShellscriptPackage extends EPackage
      * @generated
      */
     EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Expression</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GREETING__EXPRESSION = eINSTANCE.getGreeting_Expression();
 
   }
 

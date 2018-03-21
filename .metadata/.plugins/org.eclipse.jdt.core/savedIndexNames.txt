@@ -1,8 +1,6 @@
 INDEX VERSION 1.130+/home/15280420/workspace/.metadata/.plugins/org.eclipse.jdt.core
 3512161136.index
-316448729.index
 2773322106.index
-1298219711.index
 3204212980.index
 4097417682.index
 1048898439.index
@@ -35,12 +33,10 @@ INDEX VERSION 1.130+/home/15280420/workspace/.metadata/.plugins/org.eclipse.jdt.
 1656752025.index
 2359322674.index
 1659731108.index
-2958420204.index
 111492741.index
 2410754049.index
 3883508318.index
 1138834211.index
-856004672.index
 1565130312.index
 2178869881.index
 2027955274.index
@@ -81,7 +77,6 @@ INDEX VERSION 1.130+/home/15280420/workspace/.metadata/.plugins/org.eclipse.jdt.
 1610486446.index
 1090602628.index
 695310843.index
-2818245600.index
 3422984410.index
 450997091.index
 2745972479.index

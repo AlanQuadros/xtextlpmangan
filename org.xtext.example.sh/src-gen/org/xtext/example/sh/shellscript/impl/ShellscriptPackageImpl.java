@@ -145,16 +145,6 @@ public class ShellscriptPackageImpl extends EPackageImpl implements ShellscriptP
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGreeting_Expression()
-  {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public ShellscriptFactory getShellscriptFactory()
   {
     return (ShellscriptFactory)getEFactoryInstance();
@@ -185,7 +175,6 @@ public class ShellscriptPackageImpl extends EPackageImpl implements ShellscriptP
 
     greetingEClass = createEClass(GREETING);
     createEAttribute(greetingEClass, GREETING__NAME);
-    createEAttribute(greetingEClass, GREETING__EXPRESSION);
   }
 
   /**
@@ -224,7 +213,6 @@ public class ShellscriptPackageImpl extends EPackageImpl implements ShellscriptP
 
     initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGreeting_Expression(), ecorePackage.getEString(), "expression", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

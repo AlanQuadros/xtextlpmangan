@@ -26,7 +26,7 @@ public class ShellscriptParsingTest {
   public void loadModel() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("$a = $b");
+      _builder.append("if [ \"");
       _builder.newLine();
       final Model result = this.parseHelper.parse(_builder);
       Assert.assertNotNull(result);

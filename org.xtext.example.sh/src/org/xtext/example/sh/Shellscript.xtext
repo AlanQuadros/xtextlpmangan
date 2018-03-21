@@ -5,8 +5,17 @@ generate shellscript "http://www.xtext.org/example/sh/Shellscript"
 Model:
 	greetings+=Greeting*;
 	
-Greeting:
-	name=ID '=' expression=Expression;
+//Greeting:
+//	name=ID '=' expression=Expression;
+//
+//Expression:
+//	INT | '$'ID;
 
+Greeting:
+	'if' '[' name=ASPAS ;
+//	 '$'name=ID '"' -gt' value=INT ']'
 Expression:
-	INT | '$'ID;
+	'$'ID;
+	
+terminal ASPAS:
+	'"';

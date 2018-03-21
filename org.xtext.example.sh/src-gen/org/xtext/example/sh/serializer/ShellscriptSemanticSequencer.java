@@ -49,18 +49,15 @@ public class ShellscriptSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Greeting returns Greeting
 	 *
 	 * Constraint:
-	 *     (name=ID expression=Expression)
+	 *     name=ASPAS
 	 */
 	protected void sequence_Greeting(ISerializationContext context, Greeting semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ShellscriptPackage.Literals.GREETING__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ShellscriptPackage.Literals.GREETING__NAME));
-			if (transientValues.isValueTransient(semanticObject, ShellscriptPackage.Literals.GREETING__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ShellscriptPackage.Literals.GREETING__EXPRESSION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGreetingAccess().getExpressionExpressionParserRuleCall_3_0(), semanticObject.getExpression());
+		feeder.accept(grammarAccess.getGreetingAccess().getNameASPASTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

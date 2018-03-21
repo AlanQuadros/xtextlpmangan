@@ -112,15 +112,19 @@ ruleGreeting returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='$'
+		otherlv_0='if'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getGreetingAccess().getDollarSignKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getGreetingAccess().getIfKeyword_0());
+		}
+		otherlv_1='['
+		{
+			newLeafNode(otherlv_1, grammarAccess.getGreetingAccess().getLeftSquareBracketKeyword_1());
 		}
 		(
 			(
-				lv_name_1_0=RULE_ID
+				lv_name_2_0=RULE_ASPAS
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_2_0, grammarAccess.getGreetingAccess().getNameASPASTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -129,77 +133,15 @@ ruleGreeting returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_2='='
-		{
-			newLeafNode(otherlv_2, grammarAccess.getGreetingAccess().getEqualsSignKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGreetingAccess().getExpressionExpressionParserRuleCall_3_0());
-				}
-				lv_expression_3_0=ruleExpression
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGreetingRule());
-					}
-					set(
-						$current,
-						"expression",
-						lv_expression_3_0,
-						"org.xtext.example.sh.Shellscript.Expression");
-					afterParserOrEnumRuleCall();
+						lv_name_2_0,
+						"org.xtext.example.sh.Shellscript.ASPAS");
 				}
 			)
 		)
 	)
 ;
 
-// Entry rule entryRuleExpression
-entryRuleExpression returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getExpressionRule()); }
-	iv_ruleExpression=ruleExpression
-	{ $current=$iv_ruleExpression.current.getText(); }
-	EOF;
-
-// Rule Expression
-ruleExpression returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		this_INT_0=RULE_INT
-		{
-			$current.merge(this_INT_0);
-		}
-		{
-			newLeafNode(this_INT_0, grammarAccess.getExpressionAccess().getINTTerminalRuleCall_0());
-		}
-		    |
-		(
-			kw='$'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getExpressionAccess().getDollarSignKeyword_1_0());
-			}
-			this_ID_2=RULE_ID
-			{
-				$current.merge(this_ID_2);
-			}
-			{
-				newLeafNode(this_ID_2, grammarAccess.getExpressionAccess().getIDTerminalRuleCall_1_1());
-			}
-		)
-	)
-;
+RULE_ASPAS : '"';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

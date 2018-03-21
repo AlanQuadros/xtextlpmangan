@@ -22,7 +22,6 @@ import org.xtext.example.sh.shellscript.ShellscriptPackage;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.sh.shellscript.impl.GreetingImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.sh.shellscript.impl.GreetingImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,26 +47,6 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExpression()
-   * @generated
-   * @ordered
-   */
-  protected static final String EXPRESSION_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getExpression() <em>Expression</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExpression()
-   * @generated
-   * @ordered
-   */
-  protected String expression = EXPRESSION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -118,29 +97,6 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getExpression()
-  {
-    return expression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setExpression(String newExpression)
-  {
-    String oldExpression = expression;
-    expression = newExpression;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ShellscriptPackage.GREETING__EXPRESSION, oldExpression, expression));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -148,8 +104,6 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     {
       case ShellscriptPackage.GREETING__NAME:
         return getName();
-      case ShellscriptPackage.GREETING__EXPRESSION:
-        return getExpression();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -166,9 +120,6 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     {
       case ShellscriptPackage.GREETING__NAME:
         setName((String)newValue);
-        return;
-      case ShellscriptPackage.GREETING__EXPRESSION:
-        setExpression((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,9 +138,6 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
       case ShellscriptPackage.GREETING__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case ShellscriptPackage.GREETING__EXPRESSION:
-        setExpression(EXPRESSION_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -206,8 +154,6 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     {
       case ShellscriptPackage.GREETING__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ShellscriptPackage.GREETING__EXPRESSION:
-        return EXPRESSION_EDEFAULT == null ? expression != null : !EXPRESSION_EDEFAULT.equals(expression);
     }
     return super.eIsSet(featureID);
   }
@@ -225,8 +171,6 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", expression: ");
-    result.append(expression);
     result.append(')');
     return result.toString();
   }
