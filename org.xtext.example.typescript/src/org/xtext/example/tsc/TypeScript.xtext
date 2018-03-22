@@ -1,0 +1,17 @@
+grammar org.xtext.example.tsc.TypeScript with org.eclipse.xtext.common.Terminals
+
+generate typeScript "http://www.xtext.org/example/tsc/TypeScript"
+
+Model:
+	compute=Compute;
+	
+Compute:
+//	'import' '{' (expression=Expression(',')?)* '}' 'from' '[' '.'? '.'? (expression=Expression('/'?))* ']' ';' ;
+	'import' '{' (expression=Expression(',')?)* '}' 'from' name=STRING ';' ;
+
+Expression:
+	INT | ID;	
+	
+terminal STRING: 
+    '"' ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
+    "'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
