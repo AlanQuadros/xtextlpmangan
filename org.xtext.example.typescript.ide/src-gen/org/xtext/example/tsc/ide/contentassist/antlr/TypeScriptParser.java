@@ -31,19 +31,18 @@ public class TypeScriptParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getGreetingAccess().getAlternatives_1(), "rule__Greeting__Alternatives_1");
-					put(grammarAccess.getGreetingAccess().getAlternatives_1_0_0(), "rule__Greeting__Alternatives_1_0_0");
+					put(grammarAccess.getComputeAccess().getAlternatives_1(), "rule__Compute__Alternatives_1");
+					put(grammarAccess.getComputeAccess().getAlternatives_1_0_0(), "rule__Compute__Alternatives_1_0_0");
 					put(grammarAccess.getExpressionAccess().getAlternatives(), "rule__Expression__Alternatives");
-					put(grammarAccess.getGreetingAccess().getGroup(), "rule__Greeting__Group__0");
-					put(grammarAccess.getGreetingAccess().getGroup_1_0(), "rule__Greeting__Group_1_0__0");
-					put(grammarAccess.getGreetingAccess().getGroup_1_0_0_0(), "rule__Greeting__Group_1_0_0_0__0");
-					put(grammarAccess.getGreetingAccess().getGroup_1_0_0_0_1(), "rule__Greeting__Group_1_0_0_0_1__0");
-					put(grammarAccess.getGreetingAccess().getGroup_1_0_0_1(), "rule__Greeting__Group_1_0_0_1__0");
-					put(grammarAccess.getModelAccess().getGreetingsAssignment(), "rule__Model__GreetingsAssignment");
-					put(grammarAccess.getGreetingAccess().getExpressionAssignment_1_0_0_0_1_0(), "rule__Greeting__ExpressionAssignment_1_0_0_0_1_0");
-					put(grammarAccess.getGreetingAccess().getExpressionAssignment_1_0_0_1_0(), "rule__Greeting__ExpressionAssignment_1_0_0_1_0");
-					put(grammarAccess.getGreetingAccess().getNameAssignment_1_0_2(), "rule__Greeting__NameAssignment_1_0_2");
-					put(grammarAccess.getGreetingAccess().getNameAssignment_1_1(), "rule__Greeting__NameAssignment_1_1");
+					put(grammarAccess.getComputeAccess().getGroup(), "rule__Compute__Group__0");
+					put(grammarAccess.getComputeAccess().getGroup_1_0(), "rule__Compute__Group_1_0__0");
+					put(grammarAccess.getComputeAccess().getGroup_1_0_0_0(), "rule__Compute__Group_1_0_0_0__0");
+					put(grammarAccess.getClassesAccess().getGroup(), "rule__Classes__Group__0");
+					put(grammarAccess.getModelAccess().getComputeAssignment(), "rule__Model__ComputeAssignment");
+					put(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_0_1(), "rule__Compute__ExpressionAssignment_1_0_0_0_1");
+					put(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_1(), "rule__Compute__ExpressionAssignment_1_0_0_1");
+					put(grammarAccess.getComputeAccess().getNameAssignment_1_0_2(), "rule__Compute__NameAssignment_1_0_2");
+					put(grammarAccess.getComputeAccess().getNameAssignment_1_1(), "rule__Compute__NameAssignment_1_1");
 				}
 			};
 		}

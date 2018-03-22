@@ -10,24 +10,24 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.example.tsc.typeScript.Greeting;
+import org.xtext.example.tsc.typeScript.Compute;
 import org.xtext.example.tsc.typeScript.TypeScriptPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Greeting</b></em>'.
+ * An implementation of the model object '<em><b>Compute</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.tsc.typeScript.impl.GreetingImpl#getExpression <em>Expression</em>}</li>
- *   <li>{@link org.xtext.example.tsc.typeScript.impl.GreetingImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.tsc.typeScript.impl.ComputeImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.xtext.example.tsc.typeScript.impl.ComputeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeting
+public class ComputeImpl extends MinimalEObjectImpl.Container implements Compute
 {
   /**
    * The default value of the '{@link #getExpression() <em>Expression</em>}' attribute.
@@ -74,7 +74,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GreetingImpl()
+  protected ComputeImpl()
   {
     super();
   }
@@ -87,7 +87,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   @Override
   protected EClass eStaticClass()
   {
-    return TypeScriptPackage.Literals.GREETING;
+    return TypeScriptPackage.Literals.COMPUTE;
   }
 
   /**
@@ -110,7 +110,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     String oldExpression = expression;
     expression = newExpression;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TypeScriptPackage.GREETING__EXPRESSION, oldExpression, expression));
+      eNotify(new ENotificationImpl(this, Notification.SET, TypeScriptPackage.COMPUTE__EXPRESSION, oldExpression, expression));
   }
 
   /**
@@ -133,7 +133,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, TypeScriptPackage.GREETING__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, TypeScriptPackage.COMPUTE__NAME, oldName, name));
   }
 
   /**
@@ -146,9 +146,9 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case TypeScriptPackage.GREETING__EXPRESSION:
+      case TypeScriptPackage.COMPUTE__EXPRESSION:
         return getExpression();
-      case TypeScriptPackage.GREETING__NAME:
+      case TypeScriptPackage.COMPUTE__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -164,10 +164,10 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case TypeScriptPackage.GREETING__EXPRESSION:
+      case TypeScriptPackage.COMPUTE__EXPRESSION:
         setExpression((String)newValue);
         return;
-      case TypeScriptPackage.GREETING__NAME:
+      case TypeScriptPackage.COMPUTE__NAME:
         setName((String)newValue);
         return;
     }
@@ -184,10 +184,10 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case TypeScriptPackage.GREETING__EXPRESSION:
+      case TypeScriptPackage.COMPUTE__EXPRESSION:
         setExpression(EXPRESSION_EDEFAULT);
         return;
-      case TypeScriptPackage.GREETING__NAME:
+      case TypeScriptPackage.COMPUTE__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -204,9 +204,9 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case TypeScriptPackage.GREETING__EXPRESSION:
+      case TypeScriptPackage.COMPUTE__EXPRESSION:
         return EXPRESSION_EDEFAULT == null ? expression != null : !EXPRESSION_EDEFAULT.equals(expression);
-      case TypeScriptPackage.GREETING__NAME:
+      case TypeScriptPackage.COMPUTE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -231,4 +231,4 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     return result.toString();
   }
 
-} //GreetingImpl
+} //ComputeImpl

@@ -232,10 +232,10 @@ public class InternalTypeScriptLexer extends Lexer {
         try {
             int _type = RULE_TEXTOS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTypeScript.g:634:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalTypeScript.g:634:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalTypeScript.g:605:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalTypeScript.g:605:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalTypeScript.g:634:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalTypeScript.g:605:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -253,10 +253,10 @@ public class InternalTypeScriptLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // InternalTypeScript.g:634:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalTypeScript.g:605:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalTypeScript.g:634:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalTypeScript.g:605:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop1:
                     do {
                         int alt1=3;
@@ -272,7 +272,7 @@ public class InternalTypeScriptLexer extends Lexer {
 
                         switch (alt1) {
                     	case 1 :
-                    	    // InternalTypeScript.g:634:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // InternalTypeScript.g:605:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -288,7 +288,7 @@ public class InternalTypeScriptLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalTypeScript.g:634:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalTypeScript.g:605:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -313,10 +313,10 @@ public class InternalTypeScriptLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalTypeScript.g:634:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalTypeScript.g:605:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalTypeScript.g:634:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalTypeScript.g:605:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop2:
                     do {
                         int alt2=3;
@@ -332,7 +332,7 @@ public class InternalTypeScriptLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // InternalTypeScript.g:634:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // InternalTypeScript.g:605:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -348,7 +348,7 @@ public class InternalTypeScriptLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalTypeScript.g:634:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalTypeScript.g:605:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -391,10 +391,10 @@ public class InternalTypeScriptLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTypeScript.g:636:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalTypeScript.g:636:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalTypeScript.g:607:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalTypeScript.g:607:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalTypeScript.g:636:11: ( '^' )?
+            // InternalTypeScript.g:607:11: ( '^' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -403,7 +403,7 @@ public class InternalTypeScriptLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalTypeScript.g:636:11: '^'
+                    // InternalTypeScript.g:607:11: '^'
                     {
                     match('^'); 
 
@@ -421,7 +421,7 @@ public class InternalTypeScriptLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalTypeScript.g:636:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalTypeScript.g:607:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop5:
             do {
                 int alt5=2;
@@ -470,10 +470,10 @@ public class InternalTypeScriptLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTypeScript.g:638:10: ( ( '0' .. '9' )+ )
-            // InternalTypeScript.g:638:12: ( '0' .. '9' )+
+            // InternalTypeScript.g:609:10: ( ( '0' .. '9' )+ )
+            // InternalTypeScript.g:609:12: ( '0' .. '9' )+
             {
-            // InternalTypeScript.g:638:12: ( '0' .. '9' )+
+            // InternalTypeScript.g:609:12: ( '0' .. '9' )+
             int cnt6=0;
             loop6:
             do {
@@ -487,7 +487,7 @@ public class InternalTypeScriptLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // InternalTypeScript.g:638:13: '0' .. '9'
+            	    // InternalTypeScript.g:609:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -519,10 +519,10 @@ public class InternalTypeScriptLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTypeScript.g:640:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalTypeScript.g:640:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalTypeScript.g:611:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalTypeScript.g:611:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalTypeScript.g:640:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalTypeScript.g:611:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -540,10 +540,10 @@ public class InternalTypeScriptLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // InternalTypeScript.g:640:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalTypeScript.g:611:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalTypeScript.g:640:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalTypeScript.g:611:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -559,7 +559,7 @@ public class InternalTypeScriptLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // InternalTypeScript.g:640:21: '\\\\' .
+                    	    // InternalTypeScript.g:611:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -567,7 +567,7 @@ public class InternalTypeScriptLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalTypeScript.g:640:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalTypeScript.g:611:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -592,10 +592,10 @@ public class InternalTypeScriptLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalTypeScript.g:640:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalTypeScript.g:611:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalTypeScript.g:640:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalTypeScript.g:611:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop8:
                     do {
                         int alt8=3;
@@ -611,7 +611,7 @@ public class InternalTypeScriptLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // InternalTypeScript.g:640:54: '\\\\' .
+                    	    // InternalTypeScript.g:611:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -619,7 +619,7 @@ public class InternalTypeScriptLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalTypeScript.g:640:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalTypeScript.g:611:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -662,12 +662,12 @@ public class InternalTypeScriptLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTypeScript.g:642:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalTypeScript.g:642:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalTypeScript.g:613:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalTypeScript.g:613:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalTypeScript.g:642:24: ( options {greedy=false; } : . )*
+            // InternalTypeScript.g:613:24: ( options {greedy=false; } : . )*
             loop10:
             do {
                 int alt10=2;
@@ -692,7 +692,7 @@ public class InternalTypeScriptLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // InternalTypeScript.g:642:52: .
+            	    // InternalTypeScript.g:613:52: .
             	    {
             	    matchAny(); 
 
@@ -722,12 +722,12 @@ public class InternalTypeScriptLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTypeScript.g:644:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalTypeScript.g:644:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalTypeScript.g:615:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalTypeScript.g:615:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalTypeScript.g:644:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalTypeScript.g:615:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop11:
             do {
                 int alt11=2;
@@ -740,7 +740,7 @@ public class InternalTypeScriptLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // InternalTypeScript.g:644:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalTypeScript.g:615:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -760,7 +760,7 @@ public class InternalTypeScriptLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalTypeScript.g:644:40: ( ( '\\r' )? '\\n' )?
+            // InternalTypeScript.g:615:40: ( ( '\\r' )? '\\n' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -769,9 +769,9 @@ public class InternalTypeScriptLexer extends Lexer {
             }
             switch (alt13) {
                 case 1 :
-                    // InternalTypeScript.g:644:41: ( '\\r' )? '\\n'
+                    // InternalTypeScript.g:615:41: ( '\\r' )? '\\n'
                     {
-                    // InternalTypeScript.g:644:41: ( '\\r' )?
+                    // InternalTypeScript.g:615:41: ( '\\r' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -780,7 +780,7 @@ public class InternalTypeScriptLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // InternalTypeScript.g:644:41: '\\r'
+                            // InternalTypeScript.g:615:41: '\\r'
                             {
                             match('\r'); 
 
@@ -812,10 +812,10 @@ public class InternalTypeScriptLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTypeScript.g:646:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalTypeScript.g:646:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalTypeScript.g:617:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalTypeScript.g:617:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalTypeScript.g:646:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalTypeScript.g:617:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt14=0;
             loop14:
             do {
@@ -869,8 +869,8 @@ public class InternalTypeScriptLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalTypeScript.g:648:16: ( . )
-            // InternalTypeScript.g:648:18: .
+            // InternalTypeScript.g:619:16: ( . )
+            // InternalTypeScript.g:619:18: .
             {
             matchAny(); 
 

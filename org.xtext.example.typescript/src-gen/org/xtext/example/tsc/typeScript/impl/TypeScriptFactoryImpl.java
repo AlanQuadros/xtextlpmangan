@@ -66,7 +66,7 @@ public class TypeScriptFactoryImpl extends EFactoryImpl implements TypeScriptFac
     switch (eClass.getClassifierID())
     {
       case TypeScriptPackage.MODEL: return createModel();
-      case TypeScriptPackage.GREETING: return createGreeting();
+      case TypeScriptPackage.COMPUTE: return createCompute();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -88,10 +88,10 @@ public class TypeScriptFactoryImpl extends EFactoryImpl implements TypeScriptFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Greeting createGreeting()
+  public Compute createCompute()
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    ComputeImpl compute = new ComputeImpl();
+    return compute;
   }
 
   /**

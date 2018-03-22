@@ -24,21 +24,21 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.Model");
-		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
+		private final Assignment cComputeAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cComputeComputeParserRuleCall_0 = (RuleCall)cComputeAssignment.eContents().get(0);
 		
 		//Model:
-		//	greetings+=Greeting*;
+		//	compute=Compute;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//greetings+=Greeting*
-		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
+		//compute=Compute
+		public Assignment getComputeAssignment() { return cComputeAssignment; }
 		
-		//Greeting
-		public RuleCall getGreetingsGreetingParserRuleCall_0() { return cGreetingsGreetingParserRuleCall_0; }
+		//Compute
+		public RuleCall getComputeComputeParserRuleCall_0() { return cComputeComputeParserRuleCall_0; }
 	}
-	public class GreetingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.Greeting");
+	public class ComputeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.Compute");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
@@ -46,15 +46,11 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives_1_0_0 = (Alternatives)cGroup_1_0.eContents().get(0);
 		private final Group cGroup_1_0_0_0 = (Group)cAlternatives_1_0_0.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1_0_0_0_0 = (Keyword)cGroup_1_0_0_0.eContents().get(0);
-		private final Group cGroup_1_0_0_0_1 = (Group)cGroup_1_0_0_0.eContents().get(1);
-		private final Assignment cExpressionAssignment_1_0_0_0_1_0 = (Assignment)cGroup_1_0_0_0_1.eContents().get(0);
-		private final RuleCall cExpressionExpressionParserRuleCall_1_0_0_0_1_0_0 = (RuleCall)cExpressionAssignment_1_0_0_0_1_0.eContents().get(0);
-		private final Keyword cCommaKeyword_1_0_0_0_1_1 = (Keyword)cGroup_1_0_0_0_1.eContents().get(1);
+		private final Assignment cExpressionAssignment_1_0_0_0_1 = (Assignment)cGroup_1_0_0_0.eContents().get(1);
+		private final RuleCall cExpressionClassesParserRuleCall_1_0_0_0_1_0 = (RuleCall)cExpressionAssignment_1_0_0_0_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_1_0_0_0_2 = (Keyword)cGroup_1_0_0_0.eContents().get(2);
-		private final Group cGroup_1_0_0_1 = (Group)cAlternatives_1_0_0.eContents().get(1);
-		private final Assignment cExpressionAssignment_1_0_0_1_0 = (Assignment)cGroup_1_0_0_1.eContents().get(0);
-		private final RuleCall cExpressionExpressionParserRuleCall_1_0_0_1_0_0 = (RuleCall)cExpressionAssignment_1_0_0_1_0.eContents().get(0);
-		private final Keyword cCommaKeyword_1_0_0_1_1 = (Keyword)cGroup_1_0_0_1.eContents().get(1);
+		private final Assignment cExpressionAssignment_1_0_0_1 = (Assignment)cAlternatives_1_0_0.eContents().get(1);
+		private final RuleCall cExpressionClassesParserRuleCall_1_0_0_1_0 = (RuleCall)cExpressionAssignment_1_0_0_1.eContents().get(0);
 		private final Keyword cFromKeyword_1_0_1 = (Keyword)cGroup_1_0.eContents().get(1);
 		private final Assignment cNameAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
 		private final RuleCall cNameTEXTOSTerminalRuleCall_1_0_2_0 = (RuleCall)cNameAssignment_1_0_2.eContents().get(0);
@@ -62,58 +58,45 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameTEXTOSTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		//Greeting:
-		//	'import' (('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*)
-		//	'from' name=TEXTOS | name=TEXTOS) ';'?;
+		//Compute:
+		//	'import' (('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS | name=TEXTOS) ';'?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'import' (('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*) 'from' name=TEXTOS | name=TEXTOS) ';'?
+		//'import' (('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS | name=TEXTOS) ';'?
 		public Group getGroup() { return cGroup; }
 		
 		//'import'
 		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
 		
-		//('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*) 'from' name=TEXTOS | name=TEXTOS
+		//('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS | name=TEXTOS
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 		
-		//('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*) 'from' name=TEXTOS
+		//('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS
 		public Group getGroup_1_0() { return cGroup_1_0; }
 		
-		//'{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*
+		//'{' expression=Classes* '}' | expression=Classes*
 		public Alternatives getAlternatives_1_0_0() { return cAlternatives_1_0_0; }
 		
-		//'{' (expression=Expression ','?)* '}'
+		//'{' expression=Classes* '}'
 		public Group getGroup_1_0_0_0() { return cGroup_1_0_0_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1_0_0_0_0() { return cLeftCurlyBracketKeyword_1_0_0_0_0; }
 		
-		//(expression=Expression ','?)*
-		public Group getGroup_1_0_0_0_1() { return cGroup_1_0_0_0_1; }
+		//expression=Classes*
+		public Assignment getExpressionAssignment_1_0_0_0_1() { return cExpressionAssignment_1_0_0_0_1; }
 		
-		//expression=Expression
-		public Assignment getExpressionAssignment_1_0_0_0_1_0() { return cExpressionAssignment_1_0_0_0_1_0; }
-		
-		//Expression
-		public RuleCall getExpressionExpressionParserRuleCall_1_0_0_0_1_0_0() { return cExpressionExpressionParserRuleCall_1_0_0_0_1_0_0; }
-		
-		//','?
-		public Keyword getCommaKeyword_1_0_0_0_1_1() { return cCommaKeyword_1_0_0_0_1_1; }
+		//Classes
+		public RuleCall getExpressionClassesParserRuleCall_1_0_0_0_1_0() { return cExpressionClassesParserRuleCall_1_0_0_0_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_0_0_0_2() { return cRightCurlyBracketKeyword_1_0_0_0_2; }
 		
-		//(expression=Expression ','?)*
-		public Group getGroup_1_0_0_1() { return cGroup_1_0_0_1; }
+		//expression=Classes*
+		public Assignment getExpressionAssignment_1_0_0_1() { return cExpressionAssignment_1_0_0_1; }
 		
-		//expression=Expression
-		public Assignment getExpressionAssignment_1_0_0_1_0() { return cExpressionAssignment_1_0_0_1_0; }
-		
-		//Expression
-		public RuleCall getExpressionExpressionParserRuleCall_1_0_0_1_0_0() { return cExpressionExpressionParserRuleCall_1_0_0_1_0_0; }
-		
-		//','?
-		public Keyword getCommaKeyword_1_0_0_1_1() { return cCommaKeyword_1_0_0_1_1; }
+		//Classes
+		public RuleCall getExpressionClassesParserRuleCall_1_0_0_1_0() { return cExpressionClassesParserRuleCall_1_0_0_1_0; }
 		
 		//'from'
 		public Keyword getFromKeyword_1_0_1() { return cFromKeyword_1_0_1; }
@@ -132,6 +115,25 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//';'?
 		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+	public class ClassesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.Classes");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cExpressionParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cCommaKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//Classes:
+		//	Expression ','?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//Expression ','?
+		public Group getGroup() { return cGroup; }
+		
+		//Expression
+		public RuleCall getExpressionParserRuleCall_0() { return cExpressionParserRuleCall_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
 	}
 	public class ExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.Expression");
@@ -167,7 +169,8 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private final ModelElements pModel;
-	private final GreetingElements pGreeting;
+	private final ComputeElements pCompute;
+	private final ClassesElements pClasses;
 	private final ExpressionElements pExpression;
 	private final TerminalRule tTEXTOS;
 	
@@ -181,7 +184,8 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.pGreeting = new GreetingElements();
+		this.pCompute = new ComputeElements();
+		this.pClasses = new ClassesElements();
 		this.pExpression = new ExpressionElements();
 		this.tTEXTOS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.TEXTOS");
 	}
@@ -214,7 +218,7 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	greetings+=Greeting*;
+	//	compute=Compute;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -223,15 +227,24 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 	
-	//Greeting:
-	//	'import' (('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*)
-	//	'from' name=TEXTOS | name=TEXTOS) ';'?;
-	public GreetingElements getGreetingAccess() {
-		return pGreeting;
+	//Compute:
+	//	'import' (('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS | name=TEXTOS) ';'?;
+	public ComputeElements getComputeAccess() {
+		return pCompute;
 	}
 	
-	public ParserRule getGreetingRule() {
-		return getGreetingAccess().getRule();
+	public ParserRule getComputeRule() {
+		return getComputeAccess().getRule();
+	}
+	
+	//Classes:
+	//	Expression ','?;
+	public ClassesElements getClassesAccess() {
+		return pClasses;
+	}
+	
+	public ParserRule getClassesRule() {
+		return getClassesAccess().getRule();
 	}
 	
 	//Expression:

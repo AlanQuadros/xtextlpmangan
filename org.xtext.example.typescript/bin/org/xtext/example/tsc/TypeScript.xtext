@@ -3,12 +3,13 @@ grammar org.xtext.example.tsc.TypeScript with org.eclipse.xtext.common.Terminals
 generate typeScript "http://www.xtext.org/example/tsc/TypeScript"
 
 Model:
-	greetings+=Greeting*;
+	compute=Compute;
 	
-Greeting:
-	'import' 
-		(('{' (expression=Expression (',')?)* '}' | (expression=Expression (',')?)*) 
-		'from' name=TEXTOS | name=TEXTOS)  (';')?;
+Compute:
+	'import' (('{' (expression=Classes)* '}' | (expression=Classes)*) 'from' name=TEXTOS | name=TEXTOS)  (';')?;
+
+Classes:
+	(Expression (',')?);
 
 Expression:
 	INT | ID | ('as') | ('*') | ('$');

@@ -109,49 +109,31 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleModel"
-    // InternalTypeScript.g:62:1: ruleModel : ( ( rule__Model__GreetingsAssignment )* ) ;
+    // InternalTypeScript.g:62:1: ruleModel : ( ( rule__Model__ComputeAssignment ) ) ;
     public final void ruleModel() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:66:2: ( ( ( rule__Model__GreetingsAssignment )* ) )
-            // InternalTypeScript.g:67:2: ( ( rule__Model__GreetingsAssignment )* )
+            // InternalTypeScript.g:66:2: ( ( ( rule__Model__ComputeAssignment ) ) )
+            // InternalTypeScript.g:67:2: ( ( rule__Model__ComputeAssignment ) )
             {
-            // InternalTypeScript.g:67:2: ( ( rule__Model__GreetingsAssignment )* )
-            // InternalTypeScript.g:68:3: ( rule__Model__GreetingsAssignment )*
+            // InternalTypeScript.g:67:2: ( ( rule__Model__ComputeAssignment ) )
+            // InternalTypeScript.g:68:3: ( rule__Model__ComputeAssignment )
             {
-             before(grammarAccess.getModelAccess().getGreetingsAssignment()); 
-            // InternalTypeScript.g:69:3: ( rule__Model__GreetingsAssignment )*
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+             before(grammarAccess.getModelAccess().getComputeAssignment()); 
+            // InternalTypeScript.g:69:3: ( rule__Model__ComputeAssignment )
+            // InternalTypeScript.g:69:4: rule__Model__ComputeAssignment
+            {
+            pushFollow(FOLLOW_2);
+            rule__Model__ComputeAssignment();
 
-                if ( (LA1_0==15) ) {
-                    alt1=1;
-                }
+            state._fsp--;
 
 
-                switch (alt1) {
-            	case 1 :
-            	    // InternalTypeScript.g:69:4: rule__Model__GreetingsAssignment
-            	    {
-            	    pushFollow(FOLLOW_3);
-            	    rule__Model__GreetingsAssignment();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop1;
-                }
-            } while (true);
-
-             after(grammarAccess.getModelAccess().getGreetingsAssignment()); 
+             after(grammarAccess.getModelAccess().getComputeAssignment()); 
 
             }
 
@@ -173,20 +155,20 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleModel"
 
 
-    // $ANTLR start "entryRuleGreeting"
-    // InternalTypeScript.g:78:1: entryRuleGreeting : ruleGreeting EOF ;
-    public final void entryRuleGreeting() throws RecognitionException {
+    // $ANTLR start "entryRuleCompute"
+    // InternalTypeScript.g:78:1: entryRuleCompute : ruleCompute EOF ;
+    public final void entryRuleCompute() throws RecognitionException {
         try {
-            // InternalTypeScript.g:79:1: ( ruleGreeting EOF )
-            // InternalTypeScript.g:80:1: ruleGreeting EOF
+            // InternalTypeScript.g:79:1: ( ruleCompute EOF )
+            // InternalTypeScript.g:80:1: ruleCompute EOF
             {
-             before(grammarAccess.getGreetingRule()); 
+             before(grammarAccess.getComputeRule()); 
             pushFollow(FOLLOW_1);
-            ruleGreeting();
+            ruleCompute();
 
             state._fsp--;
 
-             after(grammarAccess.getGreetingRule()); 
+             after(grammarAccess.getComputeRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -200,35 +182,35 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleGreeting"
+    // $ANTLR end "entryRuleCompute"
 
 
-    // $ANTLR start "ruleGreeting"
-    // InternalTypeScript.g:87:1: ruleGreeting : ( ( rule__Greeting__Group__0 ) ) ;
-    public final void ruleGreeting() throws RecognitionException {
+    // $ANTLR start "ruleCompute"
+    // InternalTypeScript.g:87:1: ruleCompute : ( ( rule__Compute__Group__0 ) ) ;
+    public final void ruleCompute() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:91:2: ( ( ( rule__Greeting__Group__0 ) ) )
-            // InternalTypeScript.g:92:2: ( ( rule__Greeting__Group__0 ) )
+            // InternalTypeScript.g:91:2: ( ( ( rule__Compute__Group__0 ) ) )
+            // InternalTypeScript.g:92:2: ( ( rule__Compute__Group__0 ) )
             {
-            // InternalTypeScript.g:92:2: ( ( rule__Greeting__Group__0 ) )
-            // InternalTypeScript.g:93:3: ( rule__Greeting__Group__0 )
+            // InternalTypeScript.g:92:2: ( ( rule__Compute__Group__0 ) )
+            // InternalTypeScript.g:93:3: ( rule__Compute__Group__0 )
             {
-             before(grammarAccess.getGreetingAccess().getGroup()); 
-            // InternalTypeScript.g:94:3: ( rule__Greeting__Group__0 )
-            // InternalTypeScript.g:94:4: rule__Greeting__Group__0
+             before(grammarAccess.getComputeAccess().getGroup()); 
+            // InternalTypeScript.g:94:3: ( rule__Compute__Group__0 )
+            // InternalTypeScript.g:94:4: rule__Compute__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group__0();
+            rule__Compute__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getGreetingAccess().getGroup()); 
+             after(grammarAccess.getComputeAccess().getGroup()); 
 
             }
 
@@ -247,15 +229,92 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleGreeting"
+    // $ANTLR end "ruleCompute"
+
+
+    // $ANTLR start "entryRuleClasses"
+    // InternalTypeScript.g:103:1: entryRuleClasses : ruleClasses EOF ;
+    public final void entryRuleClasses() throws RecognitionException {
+        try {
+            // InternalTypeScript.g:104:1: ( ruleClasses EOF )
+            // InternalTypeScript.g:105:1: ruleClasses EOF
+            {
+             before(grammarAccess.getClassesRule()); 
+            pushFollow(FOLLOW_1);
+            ruleClasses();
+
+            state._fsp--;
+
+             after(grammarAccess.getClassesRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleClasses"
+
+
+    // $ANTLR start "ruleClasses"
+    // InternalTypeScript.g:112:1: ruleClasses : ( ( rule__Classes__Group__0 ) ) ;
+    public final void ruleClasses() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTypeScript.g:116:2: ( ( ( rule__Classes__Group__0 ) ) )
+            // InternalTypeScript.g:117:2: ( ( rule__Classes__Group__0 ) )
+            {
+            // InternalTypeScript.g:117:2: ( ( rule__Classes__Group__0 ) )
+            // InternalTypeScript.g:118:3: ( rule__Classes__Group__0 )
+            {
+             before(grammarAccess.getClassesAccess().getGroup()); 
+            // InternalTypeScript.g:119:3: ( rule__Classes__Group__0 )
+            // InternalTypeScript.g:119:4: rule__Classes__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Classes__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getClassesAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleClasses"
 
 
     // $ANTLR start "entryRuleExpression"
-    // InternalTypeScript.g:103:1: entryRuleExpression : ruleExpression EOF ;
+    // InternalTypeScript.g:128:1: entryRuleExpression : ruleExpression EOF ;
     public final void entryRuleExpression() throws RecognitionException {
         try {
-            // InternalTypeScript.g:104:1: ( ruleExpression EOF )
-            // InternalTypeScript.g:105:1: ruleExpression EOF
+            // InternalTypeScript.g:129:1: ( ruleExpression EOF )
+            // InternalTypeScript.g:130:1: ruleExpression EOF
             {
              before(grammarAccess.getExpressionRule()); 
             pushFollow(FOLLOW_1);
@@ -281,21 +340,21 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleExpression"
-    // InternalTypeScript.g:112:1: ruleExpression : ( ( rule__Expression__Alternatives ) ) ;
+    // InternalTypeScript.g:137:1: ruleExpression : ( ( rule__Expression__Alternatives ) ) ;
     public final void ruleExpression() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:116:2: ( ( ( rule__Expression__Alternatives ) ) )
-            // InternalTypeScript.g:117:2: ( ( rule__Expression__Alternatives ) )
+            // InternalTypeScript.g:141:2: ( ( ( rule__Expression__Alternatives ) ) )
+            // InternalTypeScript.g:142:2: ( ( rule__Expression__Alternatives ) )
             {
-            // InternalTypeScript.g:117:2: ( ( rule__Expression__Alternatives ) )
-            // InternalTypeScript.g:118:3: ( rule__Expression__Alternatives )
+            // InternalTypeScript.g:142:2: ( ( rule__Expression__Alternatives ) )
+            // InternalTypeScript.g:143:3: ( rule__Expression__Alternatives )
             {
              before(grammarAccess.getExpressionAccess().getAlternatives()); 
-            // InternalTypeScript.g:119:3: ( rule__Expression__Alternatives )
-            // InternalTypeScript.g:119:4: rule__Expression__Alternatives
+            // InternalTypeScript.g:144:3: ( rule__Expression__Alternatives )
+            // InternalTypeScript.g:144:4: rule__Expression__Alternatives
             {
             pushFollow(FOLLOW_2);
             rule__Expression__Alternatives();
@@ -327,49 +386,49 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleExpression"
 
 
-    // $ANTLR start "rule__Greeting__Alternatives_1"
-    // InternalTypeScript.g:127:1: rule__Greeting__Alternatives_1 : ( ( ( rule__Greeting__Group_1_0__0 ) ) | ( ( rule__Greeting__NameAssignment_1_1 ) ) );
-    public final void rule__Greeting__Alternatives_1() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Alternatives_1"
+    // InternalTypeScript.g:152:1: rule__Compute__Alternatives_1 : ( ( ( rule__Compute__Group_1_0__0 ) ) | ( ( rule__Compute__NameAssignment_1_1 ) ) );
+    public final void rule__Compute__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:131:1: ( ( ( rule__Greeting__Group_1_0__0 ) ) | ( ( rule__Greeting__NameAssignment_1_1 ) ) )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
+            // InternalTypeScript.g:156:1: ( ( ( rule__Compute__Group_1_0__0 ) ) | ( ( rule__Compute__NameAssignment_1_1 ) ) )
+            int alt1=2;
+            int LA1_0 = input.LA(1);
 
-            if ( ((LA2_0>=RULE_INT && LA2_0<=RULE_ID)||(LA2_0>=12 && LA2_0<=14)||(LA2_0>=17 && LA2_0<=18)) ) {
-                alt2=1;
+            if ( ((LA1_0>=RULE_INT && LA1_0<=RULE_ID)||(LA1_0>=12 && LA1_0<=14)||(LA1_0>=17 && LA1_0<=18)) ) {
+                alt1=1;
             }
-            else if ( (LA2_0==RULE_TEXTOS) ) {
-                alt2=2;
+            else if ( (LA1_0==RULE_TEXTOS) ) {
+                alt1=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
+                    new NoViableAltException("", 1, 0, input);
 
                 throw nvae;
             }
-            switch (alt2) {
+            switch (alt1) {
                 case 1 :
-                    // InternalTypeScript.g:132:2: ( ( rule__Greeting__Group_1_0__0 ) )
+                    // InternalTypeScript.g:157:2: ( ( rule__Compute__Group_1_0__0 ) )
                     {
-                    // InternalTypeScript.g:132:2: ( ( rule__Greeting__Group_1_0__0 ) )
-                    // InternalTypeScript.g:133:3: ( rule__Greeting__Group_1_0__0 )
+                    // InternalTypeScript.g:157:2: ( ( rule__Compute__Group_1_0__0 ) )
+                    // InternalTypeScript.g:158:3: ( rule__Compute__Group_1_0__0 )
                     {
-                     before(grammarAccess.getGreetingAccess().getGroup_1_0()); 
-                    // InternalTypeScript.g:134:3: ( rule__Greeting__Group_1_0__0 )
-                    // InternalTypeScript.g:134:4: rule__Greeting__Group_1_0__0
+                     before(grammarAccess.getComputeAccess().getGroup_1_0()); 
+                    // InternalTypeScript.g:159:3: ( rule__Compute__Group_1_0__0 )
+                    // InternalTypeScript.g:159:4: rule__Compute__Group_1_0__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Greeting__Group_1_0__0();
+                    rule__Compute__Group_1_0__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getGreetingAccess().getGroup_1_0()); 
+                     after(grammarAccess.getComputeAccess().getGroup_1_0()); 
 
                     }
 
@@ -377,24 +436,24 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalTypeScript.g:138:2: ( ( rule__Greeting__NameAssignment_1_1 ) )
+                    // InternalTypeScript.g:163:2: ( ( rule__Compute__NameAssignment_1_1 ) )
                     {
-                    // InternalTypeScript.g:138:2: ( ( rule__Greeting__NameAssignment_1_1 ) )
-                    // InternalTypeScript.g:139:3: ( rule__Greeting__NameAssignment_1_1 )
+                    // InternalTypeScript.g:163:2: ( ( rule__Compute__NameAssignment_1_1 ) )
+                    // InternalTypeScript.g:164:3: ( rule__Compute__NameAssignment_1_1 )
                     {
-                     before(grammarAccess.getGreetingAccess().getNameAssignment_1_1()); 
-                    // InternalTypeScript.g:140:3: ( rule__Greeting__NameAssignment_1_1 )
-                    // InternalTypeScript.g:140:4: rule__Greeting__NameAssignment_1_1
+                     before(grammarAccess.getComputeAccess().getNameAssignment_1_1()); 
+                    // InternalTypeScript.g:165:3: ( rule__Compute__NameAssignment_1_1 )
+                    // InternalTypeScript.g:165:4: rule__Compute__NameAssignment_1_1
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Greeting__NameAssignment_1_1();
+                    rule__Compute__NameAssignment_1_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getGreetingAccess().getNameAssignment_1_1()); 
+                     after(grammarAccess.getComputeAccess().getNameAssignment_1_1()); 
 
                     }
 
@@ -415,52 +474,52 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Alternatives_1"
+    // $ANTLR end "rule__Compute__Alternatives_1"
 
 
-    // $ANTLR start "rule__Greeting__Alternatives_1_0_0"
-    // InternalTypeScript.g:148:1: rule__Greeting__Alternatives_1_0_0 : ( ( ( rule__Greeting__Group_1_0_0_0__0 ) ) | ( ( rule__Greeting__Group_1_0_0_1__0 )* ) );
-    public final void rule__Greeting__Alternatives_1_0_0() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Alternatives_1_0_0"
+    // InternalTypeScript.g:173:1: rule__Compute__Alternatives_1_0_0 : ( ( ( rule__Compute__Group_1_0_0_0__0 ) ) | ( ( rule__Compute__ExpressionAssignment_1_0_0_1 )* ) );
+    public final void rule__Compute__Alternatives_1_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:152:1: ( ( ( rule__Greeting__Group_1_0_0_0__0 ) ) | ( ( rule__Greeting__Group_1_0_0_1__0 )* ) )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            // InternalTypeScript.g:177:1: ( ( ( rule__Compute__Group_1_0_0_0__0 ) ) | ( ( rule__Compute__ExpressionAssignment_1_0_0_1 )* ) )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA4_0==18) ) {
-                alt4=1;
+            if ( (LA3_0==18) ) {
+                alt3=1;
             }
-            else if ( ((LA4_0>=RULE_INT && LA4_0<=RULE_ID)||(LA4_0>=12 && LA4_0<=14)||LA4_0==17) ) {
-                alt4=2;
+            else if ( ((LA3_0>=RULE_INT && LA3_0<=RULE_ID)||(LA3_0>=12 && LA3_0<=14)||LA3_0==17) ) {
+                alt3=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt3) {
                 case 1 :
-                    // InternalTypeScript.g:153:2: ( ( rule__Greeting__Group_1_0_0_0__0 ) )
+                    // InternalTypeScript.g:178:2: ( ( rule__Compute__Group_1_0_0_0__0 ) )
                     {
-                    // InternalTypeScript.g:153:2: ( ( rule__Greeting__Group_1_0_0_0__0 ) )
-                    // InternalTypeScript.g:154:3: ( rule__Greeting__Group_1_0_0_0__0 )
+                    // InternalTypeScript.g:178:2: ( ( rule__Compute__Group_1_0_0_0__0 ) )
+                    // InternalTypeScript.g:179:3: ( rule__Compute__Group_1_0_0_0__0 )
                     {
-                     before(grammarAccess.getGreetingAccess().getGroup_1_0_0_0()); 
-                    // InternalTypeScript.g:155:3: ( rule__Greeting__Group_1_0_0_0__0 )
-                    // InternalTypeScript.g:155:4: rule__Greeting__Group_1_0_0_0__0
+                     before(grammarAccess.getComputeAccess().getGroup_1_0_0_0()); 
+                    // InternalTypeScript.g:180:3: ( rule__Compute__Group_1_0_0_0__0 )
+                    // InternalTypeScript.g:180:4: rule__Compute__Group_1_0_0_0__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Greeting__Group_1_0_0_0__0();
+                    rule__Compute__Group_1_0_0_0__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getGreetingAccess().getGroup_1_0_0_0()); 
+                     after(grammarAccess.getComputeAccess().getGroup_1_0_0_0()); 
 
                     }
 
@@ -468,29 +527,29 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalTypeScript.g:159:2: ( ( rule__Greeting__Group_1_0_0_1__0 )* )
+                    // InternalTypeScript.g:184:2: ( ( rule__Compute__ExpressionAssignment_1_0_0_1 )* )
                     {
-                    // InternalTypeScript.g:159:2: ( ( rule__Greeting__Group_1_0_0_1__0 )* )
-                    // InternalTypeScript.g:160:3: ( rule__Greeting__Group_1_0_0_1__0 )*
+                    // InternalTypeScript.g:184:2: ( ( rule__Compute__ExpressionAssignment_1_0_0_1 )* )
+                    // InternalTypeScript.g:185:3: ( rule__Compute__ExpressionAssignment_1_0_0_1 )*
                     {
-                     before(grammarAccess.getGreetingAccess().getGroup_1_0_0_1()); 
-                    // InternalTypeScript.g:161:3: ( rule__Greeting__Group_1_0_0_1__0 )*
-                    loop3:
+                     before(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_1()); 
+                    // InternalTypeScript.g:186:3: ( rule__Compute__ExpressionAssignment_1_0_0_1 )*
+                    loop2:
                     do {
-                        int alt3=2;
-                        int LA3_0 = input.LA(1);
+                        int alt2=2;
+                        int LA2_0 = input.LA(1);
 
-                        if ( ((LA3_0>=RULE_INT && LA3_0<=RULE_ID)||(LA3_0>=12 && LA3_0<=14)) ) {
-                            alt3=1;
+                        if ( ((LA2_0>=RULE_INT && LA2_0<=RULE_ID)||(LA2_0>=12 && LA2_0<=14)) ) {
+                            alt2=1;
                         }
 
 
-                        switch (alt3) {
+                        switch (alt2) {
                     	case 1 :
-                    	    // InternalTypeScript.g:161:4: rule__Greeting__Group_1_0_0_1__0
+                    	    // InternalTypeScript.g:186:4: rule__Compute__ExpressionAssignment_1_0_0_1
                     	    {
-                    	    pushFollow(FOLLOW_4);
-                    	    rule__Greeting__Group_1_0_0_1__0();
+                    	    pushFollow(FOLLOW_3);
+                    	    rule__Compute__ExpressionAssignment_1_0_0_1();
 
                     	    state._fsp--;
 
@@ -499,11 +558,11 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
                     	    break;
 
                     	default :
-                    	    break loop3;
+                    	    break loop2;
                         }
                     } while (true);
 
-                     after(grammarAccess.getGreetingAccess().getGroup_1_0_0_1()); 
+                     after(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_1()); 
 
                     }
 
@@ -524,57 +583,57 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Alternatives_1_0_0"
+    // $ANTLR end "rule__Compute__Alternatives_1_0_0"
 
 
     // $ANTLR start "rule__Expression__Alternatives"
-    // InternalTypeScript.g:169:1: rule__Expression__Alternatives : ( ( RULE_INT ) | ( RULE_ID ) | ( 'as' ) | ( '*' ) | ( '$' ) );
+    // InternalTypeScript.g:194:1: rule__Expression__Alternatives : ( ( RULE_INT ) | ( RULE_ID ) | ( 'as' ) | ( '*' ) | ( '$' ) );
     public final void rule__Expression__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:173:1: ( ( RULE_INT ) | ( RULE_ID ) | ( 'as' ) | ( '*' ) | ( '$' ) )
-            int alt5=5;
+            // InternalTypeScript.g:198:1: ( ( RULE_INT ) | ( RULE_ID ) | ( 'as' ) | ( '*' ) | ( '$' ) )
+            int alt4=5;
             switch ( input.LA(1) ) {
             case RULE_INT:
                 {
-                alt5=1;
+                alt4=1;
                 }
                 break;
             case RULE_ID:
                 {
-                alt5=2;
+                alt4=2;
                 }
                 break;
             case 12:
                 {
-                alt5=3;
+                alt4=3;
                 }
                 break;
             case 13:
                 {
-                alt5=4;
+                alt4=4;
                 }
                 break;
             case 14:
                 {
-                alt5=5;
+                alt4=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt5) {
+            switch (alt4) {
                 case 1 :
-                    // InternalTypeScript.g:174:2: ( RULE_INT )
+                    // InternalTypeScript.g:199:2: ( RULE_INT )
                     {
-                    // InternalTypeScript.g:174:2: ( RULE_INT )
-                    // InternalTypeScript.g:175:3: RULE_INT
+                    // InternalTypeScript.g:199:2: ( RULE_INT )
+                    // InternalTypeScript.g:200:3: RULE_INT
                     {
                      before(grammarAccess.getExpressionAccess().getINTTerminalRuleCall_0()); 
                     match(input,RULE_INT,FOLLOW_2); 
@@ -586,10 +645,10 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalTypeScript.g:180:2: ( RULE_ID )
+                    // InternalTypeScript.g:205:2: ( RULE_ID )
                     {
-                    // InternalTypeScript.g:180:2: ( RULE_ID )
-                    // InternalTypeScript.g:181:3: RULE_ID
+                    // InternalTypeScript.g:205:2: ( RULE_ID )
+                    // InternalTypeScript.g:206:3: RULE_ID
                     {
                      before(grammarAccess.getExpressionAccess().getIDTerminalRuleCall_1()); 
                     match(input,RULE_ID,FOLLOW_2); 
@@ -601,10 +660,10 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // InternalTypeScript.g:186:2: ( 'as' )
+                    // InternalTypeScript.g:211:2: ( 'as' )
                     {
-                    // InternalTypeScript.g:186:2: ( 'as' )
-                    // InternalTypeScript.g:187:3: 'as'
+                    // InternalTypeScript.g:211:2: ( 'as' )
+                    // InternalTypeScript.g:212:3: 'as'
                     {
                      before(grammarAccess.getExpressionAccess().getAsKeyword_2()); 
                     match(input,12,FOLLOW_2); 
@@ -616,10 +675,10 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // InternalTypeScript.g:192:2: ( '*' )
+                    // InternalTypeScript.g:217:2: ( '*' )
                     {
-                    // InternalTypeScript.g:192:2: ( '*' )
-                    // InternalTypeScript.g:193:3: '*'
+                    // InternalTypeScript.g:217:2: ( '*' )
+                    // InternalTypeScript.g:218:3: '*'
                     {
                      before(grammarAccess.getExpressionAccess().getAsteriskKeyword_3()); 
                     match(input,13,FOLLOW_2); 
@@ -631,10 +690,10 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // InternalTypeScript.g:198:2: ( '$' )
+                    // InternalTypeScript.g:223:2: ( '$' )
                     {
-                    // InternalTypeScript.g:198:2: ( '$' )
-                    // InternalTypeScript.g:199:3: '$'
+                    // InternalTypeScript.g:223:2: ( '$' )
+                    // InternalTypeScript.g:224:3: '$'
                     {
                      before(grammarAccess.getExpressionAccess().getDollarSignKeyword_4()); 
                     match(input,14,FOLLOW_2); 
@@ -662,23 +721,98 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Expression__Alternatives"
 
 
-    // $ANTLR start "rule__Greeting__Group__0"
-    // InternalTypeScript.g:208:1: rule__Greeting__Group__0 : rule__Greeting__Group__0__Impl rule__Greeting__Group__1 ;
-    public final void rule__Greeting__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group__0"
+    // InternalTypeScript.g:233:1: rule__Compute__Group__0 : rule__Compute__Group__0__Impl rule__Compute__Group__1 ;
+    public final void rule__Compute__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:212:1: ( rule__Greeting__Group__0__Impl rule__Greeting__Group__1 )
-            // InternalTypeScript.g:213:2: rule__Greeting__Group__0__Impl rule__Greeting__Group__1
+            // InternalTypeScript.g:237:1: ( rule__Compute__Group__0__Impl rule__Compute__Group__1 )
+            // InternalTypeScript.g:238:2: rule__Compute__Group__0__Impl rule__Compute__Group__1
+            {
+            pushFollow(FOLLOW_4);
+            rule__Compute__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Compute__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Compute__Group__0"
+
+
+    // $ANTLR start "rule__Compute__Group__0__Impl"
+    // InternalTypeScript.g:245:1: rule__Compute__Group__0__Impl : ( 'import' ) ;
+    public final void rule__Compute__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTypeScript.g:249:1: ( ( 'import' ) )
+            // InternalTypeScript.g:250:1: ( 'import' )
+            {
+            // InternalTypeScript.g:250:1: ( 'import' )
+            // InternalTypeScript.g:251:2: 'import'
+            {
+             before(grammarAccess.getComputeAccess().getImportKeyword_0()); 
+            match(input,15,FOLLOW_2); 
+             after(grammarAccess.getComputeAccess().getImportKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Compute__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Compute__Group__1"
+    // InternalTypeScript.g:260:1: rule__Compute__Group__1 : rule__Compute__Group__1__Impl rule__Compute__Group__2 ;
+    public final void rule__Compute__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTypeScript.g:264:1: ( rule__Compute__Group__1__Impl rule__Compute__Group__2 )
+            // InternalTypeScript.g:265:2: rule__Compute__Group__1__Impl rule__Compute__Group__2
             {
             pushFollow(FOLLOW_5);
-            rule__Greeting__Group__0__Impl();
+            rule__Compute__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group__1();
+            rule__Compute__Group__2();
 
             state._fsp--;
 
@@ -697,110 +831,35 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__0"
+    // $ANTLR end "rule__Compute__Group__1"
 
 
-    // $ANTLR start "rule__Greeting__Group__0__Impl"
-    // InternalTypeScript.g:220:1: rule__Greeting__Group__0__Impl : ( 'import' ) ;
-    public final void rule__Greeting__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:224:1: ( ( 'import' ) )
-            // InternalTypeScript.g:225:1: ( 'import' )
-            {
-            // InternalTypeScript.g:225:1: ( 'import' )
-            // InternalTypeScript.g:226:2: 'import'
-            {
-             before(grammarAccess.getGreetingAccess().getImportKeyword_0()); 
-            match(input,15,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getImportKeyword_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group__0__Impl"
-
-
-    // $ANTLR start "rule__Greeting__Group__1"
-    // InternalTypeScript.g:235:1: rule__Greeting__Group__1 : rule__Greeting__Group__1__Impl rule__Greeting__Group__2 ;
-    public final void rule__Greeting__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group__1__Impl"
+    // InternalTypeScript.g:272:1: rule__Compute__Group__1__Impl : ( ( rule__Compute__Alternatives_1 ) ) ;
+    public final void rule__Compute__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:239:1: ( rule__Greeting__Group__1__Impl rule__Greeting__Group__2 )
-            // InternalTypeScript.g:240:2: rule__Greeting__Group__1__Impl rule__Greeting__Group__2
+            // InternalTypeScript.g:276:1: ( ( ( rule__Compute__Alternatives_1 ) ) )
+            // InternalTypeScript.g:277:1: ( ( rule__Compute__Alternatives_1 ) )
             {
-            pushFollow(FOLLOW_6);
-            rule__Greeting__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Greeting__Group__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group__1"
-
-
-    // $ANTLR start "rule__Greeting__Group__1__Impl"
-    // InternalTypeScript.g:247:1: rule__Greeting__Group__1__Impl : ( ( rule__Greeting__Alternatives_1 ) ) ;
-    public final void rule__Greeting__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:251:1: ( ( ( rule__Greeting__Alternatives_1 ) ) )
-            // InternalTypeScript.g:252:1: ( ( rule__Greeting__Alternatives_1 ) )
+            // InternalTypeScript.g:277:1: ( ( rule__Compute__Alternatives_1 ) )
+            // InternalTypeScript.g:278:2: ( rule__Compute__Alternatives_1 )
             {
-            // InternalTypeScript.g:252:1: ( ( rule__Greeting__Alternatives_1 ) )
-            // InternalTypeScript.g:253:2: ( rule__Greeting__Alternatives_1 )
-            {
-             before(grammarAccess.getGreetingAccess().getAlternatives_1()); 
-            // InternalTypeScript.g:254:2: ( rule__Greeting__Alternatives_1 )
-            // InternalTypeScript.g:254:3: rule__Greeting__Alternatives_1
+             before(grammarAccess.getComputeAccess().getAlternatives_1()); 
+            // InternalTypeScript.g:279:2: ( rule__Compute__Alternatives_1 )
+            // InternalTypeScript.g:279:3: rule__Compute__Alternatives_1
             {
             pushFollow(FOLLOW_2);
-            rule__Greeting__Alternatives_1();
+            rule__Compute__Alternatives_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getGreetingAccess().getAlternatives_1()); 
+             after(grammarAccess.getComputeAccess().getAlternatives_1()); 
 
             }
 
@@ -819,21 +878,21 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__1__Impl"
+    // $ANTLR end "rule__Compute__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Greeting__Group__2"
-    // InternalTypeScript.g:262:1: rule__Greeting__Group__2 : rule__Greeting__Group__2__Impl ;
-    public final void rule__Greeting__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group__2"
+    // InternalTypeScript.g:287:1: rule__Compute__Group__2 : rule__Compute__Group__2__Impl ;
+    public final void rule__Compute__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:266:1: ( rule__Greeting__Group__2__Impl )
-            // InternalTypeScript.g:267:2: rule__Greeting__Group__2__Impl
+            // InternalTypeScript.g:291:1: ( rule__Compute__Group__2__Impl )
+            // InternalTypeScript.g:292:2: rule__Compute__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group__2__Impl();
+            rule__Compute__Group__2__Impl();
 
             state._fsp--;
 
@@ -852,33 +911,33 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__2"
+    // $ANTLR end "rule__Compute__Group__2"
 
 
-    // $ANTLR start "rule__Greeting__Group__2__Impl"
-    // InternalTypeScript.g:273:1: rule__Greeting__Group__2__Impl : ( ( ';' )? ) ;
-    public final void rule__Greeting__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group__2__Impl"
+    // InternalTypeScript.g:298:1: rule__Compute__Group__2__Impl : ( ( ';' )? ) ;
+    public final void rule__Compute__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:277:1: ( ( ( ';' )? ) )
-            // InternalTypeScript.g:278:1: ( ( ';' )? )
+            // InternalTypeScript.g:302:1: ( ( ( ';' )? ) )
+            // InternalTypeScript.g:303:1: ( ( ';' )? )
             {
-            // InternalTypeScript.g:278:1: ( ( ';' )? )
-            // InternalTypeScript.g:279:2: ( ';' )?
+            // InternalTypeScript.g:303:1: ( ( ';' )? )
+            // InternalTypeScript.g:304:2: ( ';' )?
             {
-             before(grammarAccess.getGreetingAccess().getSemicolonKeyword_2()); 
-            // InternalTypeScript.g:280:2: ( ';' )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+             before(grammarAccess.getComputeAccess().getSemicolonKeyword_2()); 
+            // InternalTypeScript.g:305:2: ( ';' )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA6_0==16) ) {
-                alt6=1;
+            if ( (LA5_0==16) ) {
+                alt5=1;
             }
-            switch (alt6) {
+            switch (alt5) {
                 case 1 :
-                    // InternalTypeScript.g:280:3: ';'
+                    // InternalTypeScript.g:305:3: ';'
                     {
                     match(input,16,FOLLOW_2); 
 
@@ -887,7 +946,7 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getGreetingAccess().getSemicolonKeyword_2()); 
+             after(grammarAccess.getComputeAccess().getSemicolonKeyword_2()); 
 
             }
 
@@ -906,26 +965,111 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__2__Impl"
+    // $ANTLR end "rule__Compute__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0__0"
-    // InternalTypeScript.g:289:1: rule__Greeting__Group_1_0__0 : rule__Greeting__Group_1_0__0__Impl rule__Greeting__Group_1_0__1 ;
-    public final void rule__Greeting__Group_1_0__0() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group_1_0__0"
+    // InternalTypeScript.g:314:1: rule__Compute__Group_1_0__0 : rule__Compute__Group_1_0__0__Impl rule__Compute__Group_1_0__1 ;
+    public final void rule__Compute__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:293:1: ( rule__Greeting__Group_1_0__0__Impl rule__Greeting__Group_1_0__1 )
-            // InternalTypeScript.g:294:2: rule__Greeting__Group_1_0__0__Impl rule__Greeting__Group_1_0__1
+            // InternalTypeScript.g:318:1: ( rule__Compute__Group_1_0__0__Impl rule__Compute__Group_1_0__1 )
+            // InternalTypeScript.g:319:2: rule__Compute__Group_1_0__0__Impl rule__Compute__Group_1_0__1
+            {
+            pushFollow(FOLLOW_6);
+            rule__Compute__Group_1_0__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Compute__Group_1_0__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Compute__Group_1_0__0"
+
+
+    // $ANTLR start "rule__Compute__Group_1_0__0__Impl"
+    // InternalTypeScript.g:326:1: rule__Compute__Group_1_0__0__Impl : ( ( rule__Compute__Alternatives_1_0_0 ) ) ;
+    public final void rule__Compute__Group_1_0__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTypeScript.g:330:1: ( ( ( rule__Compute__Alternatives_1_0_0 ) ) )
+            // InternalTypeScript.g:331:1: ( ( rule__Compute__Alternatives_1_0_0 ) )
+            {
+            // InternalTypeScript.g:331:1: ( ( rule__Compute__Alternatives_1_0_0 ) )
+            // InternalTypeScript.g:332:2: ( rule__Compute__Alternatives_1_0_0 )
+            {
+             before(grammarAccess.getComputeAccess().getAlternatives_1_0_0()); 
+            // InternalTypeScript.g:333:2: ( rule__Compute__Alternatives_1_0_0 )
+            // InternalTypeScript.g:333:3: rule__Compute__Alternatives_1_0_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Compute__Alternatives_1_0_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getComputeAccess().getAlternatives_1_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Compute__Group_1_0__0__Impl"
+
+
+    // $ANTLR start "rule__Compute__Group_1_0__1"
+    // InternalTypeScript.g:341:1: rule__Compute__Group_1_0__1 : rule__Compute__Group_1_0__1__Impl rule__Compute__Group_1_0__2 ;
+    public final void rule__Compute__Group_1_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTypeScript.g:345:1: ( rule__Compute__Group_1_0__1__Impl rule__Compute__Group_1_0__2 )
+            // InternalTypeScript.g:346:2: rule__Compute__Group_1_0__1__Impl rule__Compute__Group_1_0__2
             {
             pushFollow(FOLLOW_7);
-            rule__Greeting__Group_1_0__0__Impl();
+            rule__Compute__Group_1_0__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0__1();
+            rule__Compute__Group_1_0__2();
 
             state._fsp--;
 
@@ -944,35 +1088,25 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0__0"
+    // $ANTLR end "rule__Compute__Group_1_0__1"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0__0__Impl"
-    // InternalTypeScript.g:301:1: rule__Greeting__Group_1_0__0__Impl : ( ( rule__Greeting__Alternatives_1_0_0 ) ) ;
-    public final void rule__Greeting__Group_1_0__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group_1_0__1__Impl"
+    // InternalTypeScript.g:353:1: rule__Compute__Group_1_0__1__Impl : ( 'from' ) ;
+    public final void rule__Compute__Group_1_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:305:1: ( ( ( rule__Greeting__Alternatives_1_0_0 ) ) )
-            // InternalTypeScript.g:306:1: ( ( rule__Greeting__Alternatives_1_0_0 ) )
+            // InternalTypeScript.g:357:1: ( ( 'from' ) )
+            // InternalTypeScript.g:358:1: ( 'from' )
             {
-            // InternalTypeScript.g:306:1: ( ( rule__Greeting__Alternatives_1_0_0 ) )
-            // InternalTypeScript.g:307:2: ( rule__Greeting__Alternatives_1_0_0 )
+            // InternalTypeScript.g:358:1: ( 'from' )
+            // InternalTypeScript.g:359:2: 'from'
             {
-             before(grammarAccess.getGreetingAccess().getAlternatives_1_0_0()); 
-            // InternalTypeScript.g:308:2: ( rule__Greeting__Alternatives_1_0_0 )
-            // InternalTypeScript.g:308:3: rule__Greeting__Alternatives_1_0_0
-            {
-            pushFollow(FOLLOW_2);
-            rule__Greeting__Alternatives_1_0_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getGreetingAccess().getAlternatives_1_0_0()); 
+             before(grammarAccess.getComputeAccess().getFromKeyword_1_0_1()); 
+            match(input,17,FOLLOW_2); 
+             after(grammarAccess.getComputeAccess().getFromKeyword_1_0_1()); 
 
             }
 
@@ -991,26 +1125,106 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0__0__Impl"
+    // $ANTLR end "rule__Compute__Group_1_0__1__Impl"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0__1"
-    // InternalTypeScript.g:316:1: rule__Greeting__Group_1_0__1 : rule__Greeting__Group_1_0__1__Impl rule__Greeting__Group_1_0__2 ;
-    public final void rule__Greeting__Group_1_0__1() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group_1_0__2"
+    // InternalTypeScript.g:368:1: rule__Compute__Group_1_0__2 : rule__Compute__Group_1_0__2__Impl ;
+    public final void rule__Compute__Group_1_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:320:1: ( rule__Greeting__Group_1_0__1__Impl rule__Greeting__Group_1_0__2 )
-            // InternalTypeScript.g:321:2: rule__Greeting__Group_1_0__1__Impl rule__Greeting__Group_1_0__2
+            // InternalTypeScript.g:372:1: ( rule__Compute__Group_1_0__2__Impl )
+            // InternalTypeScript.g:373:2: rule__Compute__Group_1_0__2__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Compute__Group_1_0__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Compute__Group_1_0__2"
+
+
+    // $ANTLR start "rule__Compute__Group_1_0__2__Impl"
+    // InternalTypeScript.g:379:1: rule__Compute__Group_1_0__2__Impl : ( ( rule__Compute__NameAssignment_1_0_2 ) ) ;
+    public final void rule__Compute__Group_1_0__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTypeScript.g:383:1: ( ( ( rule__Compute__NameAssignment_1_0_2 ) ) )
+            // InternalTypeScript.g:384:1: ( ( rule__Compute__NameAssignment_1_0_2 ) )
+            {
+            // InternalTypeScript.g:384:1: ( ( rule__Compute__NameAssignment_1_0_2 ) )
+            // InternalTypeScript.g:385:2: ( rule__Compute__NameAssignment_1_0_2 )
+            {
+             before(grammarAccess.getComputeAccess().getNameAssignment_1_0_2()); 
+            // InternalTypeScript.g:386:2: ( rule__Compute__NameAssignment_1_0_2 )
+            // InternalTypeScript.g:386:3: rule__Compute__NameAssignment_1_0_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Compute__NameAssignment_1_0_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getComputeAccess().getNameAssignment_1_0_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Compute__Group_1_0__2__Impl"
+
+
+    // $ANTLR start "rule__Compute__Group_1_0_0_0__0"
+    // InternalTypeScript.g:395:1: rule__Compute__Group_1_0_0_0__0 : rule__Compute__Group_1_0_0_0__0__Impl rule__Compute__Group_1_0_0_0__1 ;
+    public final void rule__Compute__Group_1_0_0_0__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTypeScript.g:399:1: ( rule__Compute__Group_1_0_0_0__0__Impl rule__Compute__Group_1_0_0_0__1 )
+            // InternalTypeScript.g:400:2: rule__Compute__Group_1_0_0_0__0__Impl rule__Compute__Group_1_0_0_0__1
             {
             pushFollow(FOLLOW_8);
-            rule__Greeting__Group_1_0__1__Impl();
+            rule__Compute__Group_1_0_0_0__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0__2();
+            rule__Compute__Group_1_0_0_0__1();
 
             state._fsp--;
 
@@ -1029,180 +1243,25 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0__1"
+    // $ANTLR end "rule__Compute__Group_1_0_0_0__0"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0__1__Impl"
-    // InternalTypeScript.g:328:1: rule__Greeting__Group_1_0__1__Impl : ( 'from' ) ;
-    public final void rule__Greeting__Group_1_0__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:332:1: ( ( 'from' ) )
-            // InternalTypeScript.g:333:1: ( 'from' )
-            {
-            // InternalTypeScript.g:333:1: ( 'from' )
-            // InternalTypeScript.g:334:2: 'from'
-            {
-             before(grammarAccess.getGreetingAccess().getFromKeyword_1_0_1()); 
-            match(input,17,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getFromKeyword_1_0_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group_1_0__1__Impl"
-
-
-    // $ANTLR start "rule__Greeting__Group_1_0__2"
-    // InternalTypeScript.g:343:1: rule__Greeting__Group_1_0__2 : rule__Greeting__Group_1_0__2__Impl ;
-    public final void rule__Greeting__Group_1_0__2() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group_1_0_0_0__0__Impl"
+    // InternalTypeScript.g:407:1: rule__Compute__Group_1_0_0_0__0__Impl : ( '{' ) ;
+    public final void rule__Compute__Group_1_0_0_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:347:1: ( rule__Greeting__Group_1_0__2__Impl )
-            // InternalTypeScript.g:348:2: rule__Greeting__Group_1_0__2__Impl
+            // InternalTypeScript.g:411:1: ( ( '{' ) )
+            // InternalTypeScript.g:412:1: ( '{' )
             {
-            pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0__2__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group_1_0__2"
-
-
-    // $ANTLR start "rule__Greeting__Group_1_0__2__Impl"
-    // InternalTypeScript.g:354:1: rule__Greeting__Group_1_0__2__Impl : ( ( rule__Greeting__NameAssignment_1_0_2 ) ) ;
-    public final void rule__Greeting__Group_1_0__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:358:1: ( ( ( rule__Greeting__NameAssignment_1_0_2 ) ) )
-            // InternalTypeScript.g:359:1: ( ( rule__Greeting__NameAssignment_1_0_2 ) )
+            // InternalTypeScript.g:412:1: ( '{' )
+            // InternalTypeScript.g:413:2: '{'
             {
-            // InternalTypeScript.g:359:1: ( ( rule__Greeting__NameAssignment_1_0_2 ) )
-            // InternalTypeScript.g:360:2: ( rule__Greeting__NameAssignment_1_0_2 )
-            {
-             before(grammarAccess.getGreetingAccess().getNameAssignment_1_0_2()); 
-            // InternalTypeScript.g:361:2: ( rule__Greeting__NameAssignment_1_0_2 )
-            // InternalTypeScript.g:361:3: rule__Greeting__NameAssignment_1_0_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Greeting__NameAssignment_1_0_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getGreetingAccess().getNameAssignment_1_0_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group_1_0__2__Impl"
-
-
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0__0"
-    // InternalTypeScript.g:370:1: rule__Greeting__Group_1_0_0_0__0 : rule__Greeting__Group_1_0_0_0__0__Impl rule__Greeting__Group_1_0_0_0__1 ;
-    public final void rule__Greeting__Group_1_0_0_0__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:374:1: ( rule__Greeting__Group_1_0_0_0__0__Impl rule__Greeting__Group_1_0_0_0__1 )
-            // InternalTypeScript.g:375:2: rule__Greeting__Group_1_0_0_0__0__Impl rule__Greeting__Group_1_0_0_0__1
-            {
-            pushFollow(FOLLOW_9);
-            rule__Greeting__Group_1_0_0_0__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0_0_0__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0__0"
-
-
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0__0__Impl"
-    // InternalTypeScript.g:382:1: rule__Greeting__Group_1_0_0_0__0__Impl : ( '{' ) ;
-    public final void rule__Greeting__Group_1_0_0_0__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:386:1: ( ( '{' ) )
-            // InternalTypeScript.g:387:1: ( '{' )
-            {
-            // InternalTypeScript.g:387:1: ( '{' )
-            // InternalTypeScript.g:388:2: '{'
-            {
-             before(grammarAccess.getGreetingAccess().getLeftCurlyBracketKeyword_1_0_0_0_0()); 
+             before(grammarAccess.getComputeAccess().getLeftCurlyBracketKeyword_1_0_0_0_0()); 
             match(input,18,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getLeftCurlyBracketKeyword_1_0_0_0_0()); 
+             after(grammarAccess.getComputeAccess().getLeftCurlyBracketKeyword_1_0_0_0_0()); 
 
             }
 
@@ -1221,26 +1280,26 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0__0__Impl"
+    // $ANTLR end "rule__Compute__Group_1_0_0_0__0__Impl"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0__1"
-    // InternalTypeScript.g:397:1: rule__Greeting__Group_1_0_0_0__1 : rule__Greeting__Group_1_0_0_0__1__Impl rule__Greeting__Group_1_0_0_0__2 ;
-    public final void rule__Greeting__Group_1_0_0_0__1() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group_1_0_0_0__1"
+    // InternalTypeScript.g:422:1: rule__Compute__Group_1_0_0_0__1 : rule__Compute__Group_1_0_0_0__1__Impl rule__Compute__Group_1_0_0_0__2 ;
+    public final void rule__Compute__Group_1_0_0_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:401:1: ( rule__Greeting__Group_1_0_0_0__1__Impl rule__Greeting__Group_1_0_0_0__2 )
-            // InternalTypeScript.g:402:2: rule__Greeting__Group_1_0_0_0__1__Impl rule__Greeting__Group_1_0_0_0__2
+            // InternalTypeScript.g:426:1: ( rule__Compute__Group_1_0_0_0__1__Impl rule__Compute__Group_1_0_0_0__2 )
+            // InternalTypeScript.g:427:2: rule__Compute__Group_1_0_0_0__1__Impl rule__Compute__Group_1_0_0_0__2
             {
-            pushFollow(FOLLOW_9);
-            rule__Greeting__Group_1_0_0_0__1__Impl();
+            pushFollow(FOLLOW_8);
+            rule__Compute__Group_1_0_0_0__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0_0_0__2();
+            rule__Compute__Group_1_0_0_0__2();
 
             state._fsp--;
 
@@ -1259,40 +1318,40 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0__1"
+    // $ANTLR end "rule__Compute__Group_1_0_0_0__1"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0__1__Impl"
-    // InternalTypeScript.g:409:1: rule__Greeting__Group_1_0_0_0__1__Impl : ( ( rule__Greeting__Group_1_0_0_0_1__0 )* ) ;
-    public final void rule__Greeting__Group_1_0_0_0__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group_1_0_0_0__1__Impl"
+    // InternalTypeScript.g:434:1: rule__Compute__Group_1_0_0_0__1__Impl : ( ( rule__Compute__ExpressionAssignment_1_0_0_0_1 )* ) ;
+    public final void rule__Compute__Group_1_0_0_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:413:1: ( ( ( rule__Greeting__Group_1_0_0_0_1__0 )* ) )
-            // InternalTypeScript.g:414:1: ( ( rule__Greeting__Group_1_0_0_0_1__0 )* )
+            // InternalTypeScript.g:438:1: ( ( ( rule__Compute__ExpressionAssignment_1_0_0_0_1 )* ) )
+            // InternalTypeScript.g:439:1: ( ( rule__Compute__ExpressionAssignment_1_0_0_0_1 )* )
             {
-            // InternalTypeScript.g:414:1: ( ( rule__Greeting__Group_1_0_0_0_1__0 )* )
-            // InternalTypeScript.g:415:2: ( rule__Greeting__Group_1_0_0_0_1__0 )*
+            // InternalTypeScript.g:439:1: ( ( rule__Compute__ExpressionAssignment_1_0_0_0_1 )* )
+            // InternalTypeScript.g:440:2: ( rule__Compute__ExpressionAssignment_1_0_0_0_1 )*
             {
-             before(grammarAccess.getGreetingAccess().getGroup_1_0_0_0_1()); 
-            // InternalTypeScript.g:416:2: ( rule__Greeting__Group_1_0_0_0_1__0 )*
-            loop7:
+             before(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_0_1()); 
+            // InternalTypeScript.g:441:2: ( rule__Compute__ExpressionAssignment_1_0_0_0_1 )*
+            loop6:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt6=2;
+                int LA6_0 = input.LA(1);
 
-                if ( ((LA7_0>=RULE_INT && LA7_0<=RULE_ID)||(LA7_0>=12 && LA7_0<=14)) ) {
-                    alt7=1;
+                if ( ((LA6_0>=RULE_INT && LA6_0<=RULE_ID)||(LA6_0>=12 && LA6_0<=14)) ) {
+                    alt6=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt6) {
             	case 1 :
-            	    // InternalTypeScript.g:416:3: rule__Greeting__Group_1_0_0_0_1__0
+            	    // InternalTypeScript.g:441:3: rule__Compute__ExpressionAssignment_1_0_0_0_1
             	    {
-            	    pushFollow(FOLLOW_4);
-            	    rule__Greeting__Group_1_0_0_0_1__0();
+            	    pushFollow(FOLLOW_3);
+            	    rule__Compute__ExpressionAssignment_1_0_0_0_1();
 
             	    state._fsp--;
 
@@ -1301,11 +1360,11 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop6;
                 }
             } while (true);
 
-             after(grammarAccess.getGreetingAccess().getGroup_1_0_0_0_1()); 
+             after(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_0_1()); 
 
             }
 
@@ -1324,21 +1383,21 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0__1__Impl"
+    // $ANTLR end "rule__Compute__Group_1_0_0_0__1__Impl"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0__2"
-    // InternalTypeScript.g:424:1: rule__Greeting__Group_1_0_0_0__2 : rule__Greeting__Group_1_0_0_0__2__Impl ;
-    public final void rule__Greeting__Group_1_0_0_0__2() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group_1_0_0_0__2"
+    // InternalTypeScript.g:449:1: rule__Compute__Group_1_0_0_0__2 : rule__Compute__Group_1_0_0_0__2__Impl ;
+    public final void rule__Compute__Group_1_0_0_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:428:1: ( rule__Greeting__Group_1_0_0_0__2__Impl )
-            // InternalTypeScript.g:429:2: rule__Greeting__Group_1_0_0_0__2__Impl
+            // InternalTypeScript.g:453:1: ( rule__Compute__Group_1_0_0_0__2__Impl )
+            // InternalTypeScript.g:454:2: rule__Compute__Group_1_0_0_0__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0_0_0__2__Impl();
+            rule__Compute__Group_1_0_0_0__2__Impl();
 
             state._fsp--;
 
@@ -1357,25 +1416,25 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0__2"
+    // $ANTLR end "rule__Compute__Group_1_0_0_0__2"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0__2__Impl"
-    // InternalTypeScript.g:435:1: rule__Greeting__Group_1_0_0_0__2__Impl : ( '}' ) ;
-    public final void rule__Greeting__Group_1_0_0_0__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Compute__Group_1_0_0_0__2__Impl"
+    // InternalTypeScript.g:460:1: rule__Compute__Group_1_0_0_0__2__Impl : ( '}' ) ;
+    public final void rule__Compute__Group_1_0_0_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:439:1: ( ( '}' ) )
-            // InternalTypeScript.g:440:1: ( '}' )
+            // InternalTypeScript.g:464:1: ( ( '}' ) )
+            // InternalTypeScript.g:465:1: ( '}' )
             {
-            // InternalTypeScript.g:440:1: ( '}' )
-            // InternalTypeScript.g:441:2: '}'
+            // InternalTypeScript.g:465:1: ( '}' )
+            // InternalTypeScript.g:466:2: '}'
             {
-             before(grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_1_0_0_0_2()); 
+             before(grammarAccess.getComputeAccess().getRightCurlyBracketKeyword_1_0_0_0_2()); 
             match(input,19,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_1_0_0_0_2()); 
+             after(grammarAccess.getComputeAccess().getRightCurlyBracketKeyword_1_0_0_0_2()); 
 
             }
 
@@ -1394,26 +1453,26 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0__2__Impl"
+    // $ANTLR end "rule__Compute__Group_1_0_0_0__2__Impl"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0_1__0"
-    // InternalTypeScript.g:451:1: rule__Greeting__Group_1_0_0_0_1__0 : rule__Greeting__Group_1_0_0_0_1__0__Impl rule__Greeting__Group_1_0_0_0_1__1 ;
-    public final void rule__Greeting__Group_1_0_0_0_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Classes__Group__0"
+    // InternalTypeScript.g:476:1: rule__Classes__Group__0 : rule__Classes__Group__0__Impl rule__Classes__Group__1 ;
+    public final void rule__Classes__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:455:1: ( rule__Greeting__Group_1_0_0_0_1__0__Impl rule__Greeting__Group_1_0_0_0_1__1 )
-            // InternalTypeScript.g:456:2: rule__Greeting__Group_1_0_0_0_1__0__Impl rule__Greeting__Group_1_0_0_0_1__1
+            // InternalTypeScript.g:480:1: ( rule__Classes__Group__0__Impl rule__Classes__Group__1 )
+            // InternalTypeScript.g:481:2: rule__Classes__Group__0__Impl rule__Classes__Group__1
             {
-            pushFollow(FOLLOW_10);
-            rule__Greeting__Group_1_0_0_0_1__0__Impl();
+            pushFollow(FOLLOW_9);
+            rule__Classes__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0_0_0_1__1();
+            rule__Classes__Group__1();
 
             state._fsp--;
 
@@ -1432,68 +1491,62 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0_1__0"
+    // $ANTLR end "rule__Classes__Group__0"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0_1__0__Impl"
-    // InternalTypeScript.g:463:1: rule__Greeting__Group_1_0_0_0_1__0__Impl : ( ( rule__Greeting__ExpressionAssignment_1_0_0_0_1_0 ) ) ;
-    public final void rule__Greeting__Group_1_0_0_0_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Classes__Group__0__Impl"
+    // InternalTypeScript.g:488:1: rule__Classes__Group__0__Impl : ( ruleExpression ) ;
+    public final void rule__Classes__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:467:1: ( ( ( rule__Greeting__ExpressionAssignment_1_0_0_0_1_0 ) ) )
-            // InternalTypeScript.g:468:1: ( ( rule__Greeting__ExpressionAssignment_1_0_0_0_1_0 ) )
+            // InternalTypeScript.g:492:1: ( ( ruleExpression ) )
+            // InternalTypeScript.g:493:1: ( ruleExpression )
             {
-            // InternalTypeScript.g:468:1: ( ( rule__Greeting__ExpressionAssignment_1_0_0_0_1_0 ) )
-            // InternalTypeScript.g:469:2: ( rule__Greeting__ExpressionAssignment_1_0_0_0_1_0 )
+            // InternalTypeScript.g:493:1: ( ruleExpression )
+            // InternalTypeScript.g:494:2: ruleExpression
             {
-             before(grammarAccess.getGreetingAccess().getExpressionAssignment_1_0_0_0_1_0()); 
-            // InternalTypeScript.g:470:2: ( rule__Greeting__ExpressionAssignment_1_0_0_0_1_0 )
-            // InternalTypeScript.g:470:3: rule__Greeting__ExpressionAssignment_1_0_0_0_1_0
+             before(grammarAccess.getClassesAccess().getExpressionParserRuleCall_0()); 
+            pushFollow(FOLLOW_2);
+            ruleExpression();
+
+            state._fsp--;
+
+             after(grammarAccess.getClassesAccess().getExpressionParserRuleCall_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Classes__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Classes__Group__1"
+    // InternalTypeScript.g:503:1: rule__Classes__Group__1 : rule__Classes__Group__1__Impl ;
+    public final void rule__Classes__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTypeScript.g:507:1: ( rule__Classes__Group__1__Impl )
+            // InternalTypeScript.g:508:2: rule__Classes__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Greeting__ExpressionAssignment_1_0_0_0_1_0();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getGreetingAccess().getExpressionAssignment_1_0_0_0_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0_1__0__Impl"
-
-
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0_1__1"
-    // InternalTypeScript.g:478:1: rule__Greeting__Group_1_0_0_0_1__1 : rule__Greeting__Group_1_0_0_0_1__1__Impl ;
-    public final void rule__Greeting__Group_1_0_0_0_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:482:1: ( rule__Greeting__Group_1_0_0_0_1__1__Impl )
-            // InternalTypeScript.g:483:2: rule__Greeting__Group_1_0_0_0_1__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0_0_0_1__1__Impl();
+            rule__Classes__Group__1__Impl();
 
             state._fsp--;
 
@@ -1512,33 +1565,33 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0_1__1"
+    // $ANTLR end "rule__Classes__Group__1"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_0_1__1__Impl"
-    // InternalTypeScript.g:489:1: rule__Greeting__Group_1_0_0_0_1__1__Impl : ( ( ',' )? ) ;
-    public final void rule__Greeting__Group_1_0_0_0_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Classes__Group__1__Impl"
+    // InternalTypeScript.g:514:1: rule__Classes__Group__1__Impl : ( ( ',' )? ) ;
+    public final void rule__Classes__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:493:1: ( ( ( ',' )? ) )
-            // InternalTypeScript.g:494:1: ( ( ',' )? )
+            // InternalTypeScript.g:518:1: ( ( ( ',' )? ) )
+            // InternalTypeScript.g:519:1: ( ( ',' )? )
             {
-            // InternalTypeScript.g:494:1: ( ( ',' )? )
-            // InternalTypeScript.g:495:2: ( ',' )?
+            // InternalTypeScript.g:519:1: ( ( ',' )? )
+            // InternalTypeScript.g:520:2: ( ',' )?
             {
-             before(grammarAccess.getGreetingAccess().getCommaKeyword_1_0_0_0_1_1()); 
-            // InternalTypeScript.g:496:2: ( ',' )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+             before(grammarAccess.getClassesAccess().getCommaKeyword_1()); 
+            // InternalTypeScript.g:521:2: ( ',' )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA8_0==20) ) {
-                alt8=1;
+            if ( (LA7_0==20) ) {
+                alt7=1;
             }
-            switch (alt8) {
+            switch (alt7) {
                 case 1 :
-                    // InternalTypeScript.g:496:3: ','
+                    // InternalTypeScript.g:521:3: ','
                     {
                     match(input,20,FOLLOW_2); 
 
@@ -1547,7 +1600,7 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getGreetingAccess().getCommaKeyword_1_0_0_0_1_1()); 
+             after(grammarAccess.getClassesAccess().getCommaKeyword_1()); 
 
             }
 
@@ -1566,28 +1619,31 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_0_1__1__Impl"
+    // $ANTLR end "rule__Classes__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_1__0"
-    // InternalTypeScript.g:505:1: rule__Greeting__Group_1_0_0_1__0 : rule__Greeting__Group_1_0_0_1__0__Impl rule__Greeting__Group_1_0_0_1__1 ;
-    public final void rule__Greeting__Group_1_0_0_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Model__ComputeAssignment"
+    // InternalTypeScript.g:530:1: rule__Model__ComputeAssignment : ( ruleCompute ) ;
+    public final void rule__Model__ComputeAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:509:1: ( rule__Greeting__Group_1_0_0_1__0__Impl rule__Greeting__Group_1_0_0_1__1 )
-            // InternalTypeScript.g:510:2: rule__Greeting__Group_1_0_0_1__0__Impl rule__Greeting__Group_1_0_0_1__1
+            // InternalTypeScript.g:534:1: ( ( ruleCompute ) )
+            // InternalTypeScript.g:535:2: ( ruleCompute )
             {
-            pushFollow(FOLLOW_10);
-            rule__Greeting__Group_1_0_0_1__0__Impl();
-
-            state._fsp--;
-
+            // InternalTypeScript.g:535:2: ( ruleCompute )
+            // InternalTypeScript.g:536:3: ruleCompute
+            {
+             before(grammarAccess.getModelAccess().getComputeComputeParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0_0_1__1();
+            ruleCompute();
 
             state._fsp--;
+
+             after(grammarAccess.getModelAccess().getComputeComputeParserRuleCall_0()); 
+
+            }
 
 
             }
@@ -1604,35 +1660,29 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_1__0"
+    // $ANTLR end "rule__Model__ComputeAssignment"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_1__0__Impl"
-    // InternalTypeScript.g:517:1: rule__Greeting__Group_1_0_0_1__0__Impl : ( ( rule__Greeting__ExpressionAssignment_1_0_0_1_0 ) ) ;
-    public final void rule__Greeting__Group_1_0_0_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Compute__ExpressionAssignment_1_0_0_0_1"
+    // InternalTypeScript.g:545:1: rule__Compute__ExpressionAssignment_1_0_0_0_1 : ( ruleClasses ) ;
+    public final void rule__Compute__ExpressionAssignment_1_0_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:521:1: ( ( ( rule__Greeting__ExpressionAssignment_1_0_0_1_0 ) ) )
-            // InternalTypeScript.g:522:1: ( ( rule__Greeting__ExpressionAssignment_1_0_0_1_0 ) )
+            // InternalTypeScript.g:549:1: ( ( ruleClasses ) )
+            // InternalTypeScript.g:550:2: ( ruleClasses )
             {
-            // InternalTypeScript.g:522:1: ( ( rule__Greeting__ExpressionAssignment_1_0_0_1_0 ) )
-            // InternalTypeScript.g:523:2: ( rule__Greeting__ExpressionAssignment_1_0_0_1_0 )
+            // InternalTypeScript.g:550:2: ( ruleClasses )
+            // InternalTypeScript.g:551:3: ruleClasses
             {
-             before(grammarAccess.getGreetingAccess().getExpressionAssignment_1_0_0_1_0()); 
-            // InternalTypeScript.g:524:2: ( rule__Greeting__ExpressionAssignment_1_0_0_1_0 )
-            // InternalTypeScript.g:524:3: rule__Greeting__ExpressionAssignment_1_0_0_1_0
-            {
+             before(grammarAccess.getComputeAccess().getExpressionClassesParserRuleCall_1_0_0_0_1_0()); 
             pushFollow(FOLLOW_2);
-            rule__Greeting__ExpressionAssignment_1_0_0_1_0();
+            ruleClasses();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getGreetingAccess().getExpressionAssignment_1_0_0_1_0()); 
+             after(grammarAccess.getComputeAccess().getExpressionClassesParserRuleCall_1_0_0_0_1_0()); 
 
             }
 
@@ -1651,75 +1701,29 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_1__0__Impl"
+    // $ANTLR end "rule__Compute__ExpressionAssignment_1_0_0_0_1"
 
 
-    // $ANTLR start "rule__Greeting__Group_1_0_0_1__1"
-    // InternalTypeScript.g:532:1: rule__Greeting__Group_1_0_0_1__1 : rule__Greeting__Group_1_0_0_1__1__Impl ;
-    public final void rule__Greeting__Group_1_0_0_1__1() throws RecognitionException {
+    // $ANTLR start "rule__Compute__ExpressionAssignment_1_0_0_1"
+    // InternalTypeScript.g:560:1: rule__Compute__ExpressionAssignment_1_0_0_1 : ( ruleClasses ) ;
+    public final void rule__Compute__ExpressionAssignment_1_0_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:536:1: ( rule__Greeting__Group_1_0_0_1__1__Impl )
-            // InternalTypeScript.g:537:2: rule__Greeting__Group_1_0_0_1__1__Impl
+            // InternalTypeScript.g:564:1: ( ( ruleClasses ) )
+            // InternalTypeScript.g:565:2: ( ruleClasses )
             {
+            // InternalTypeScript.g:565:2: ( ruleClasses )
+            // InternalTypeScript.g:566:3: ruleClasses
+            {
+             before(grammarAccess.getComputeAccess().getExpressionClassesParserRuleCall_1_0_0_1_0()); 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group_1_0_0_1__1__Impl();
+            ruleClasses();
 
             state._fsp--;
 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_1__1"
-
-
-    // $ANTLR start "rule__Greeting__Group_1_0_0_1__1__Impl"
-    // InternalTypeScript.g:543:1: rule__Greeting__Group_1_0_0_1__1__Impl : ( ( ',' )? ) ;
-    public final void rule__Greeting__Group_1_0_0_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:547:1: ( ( ( ',' )? ) )
-            // InternalTypeScript.g:548:1: ( ( ',' )? )
-            {
-            // InternalTypeScript.g:548:1: ( ( ',' )? )
-            // InternalTypeScript.g:549:2: ( ',' )?
-            {
-             before(grammarAccess.getGreetingAccess().getCommaKeyword_1_0_0_1_1()); 
-            // InternalTypeScript.g:550:2: ( ',' )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0==20) ) {
-                alt9=1;
-            }
-            switch (alt9) {
-                case 1 :
-                    // InternalTypeScript.g:550:3: ','
-                    {
-                    match(input,20,FOLLOW_2); 
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getGreetingAccess().getCommaKeyword_1_0_0_1_1()); 
+             after(grammarAccess.getComputeAccess().getExpressionClassesParserRuleCall_1_0_0_1_0()); 
 
             }
 
@@ -1738,148 +1742,25 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group_1_0_0_1__1__Impl"
+    // $ANTLR end "rule__Compute__ExpressionAssignment_1_0_0_1"
 
 
-    // $ANTLR start "rule__Model__GreetingsAssignment"
-    // InternalTypeScript.g:559:1: rule__Model__GreetingsAssignment : ( ruleGreeting ) ;
-    public final void rule__Model__GreetingsAssignment() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:563:1: ( ( ruleGreeting ) )
-            // InternalTypeScript.g:564:2: ( ruleGreeting )
-            {
-            // InternalTypeScript.g:564:2: ( ruleGreeting )
-            // InternalTypeScript.g:565:3: ruleGreeting
-            {
-             before(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
-            pushFollow(FOLLOW_2);
-            ruleGreeting();
-
-            state._fsp--;
-
-             after(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Model__GreetingsAssignment"
-
-
-    // $ANTLR start "rule__Greeting__ExpressionAssignment_1_0_0_0_1_0"
-    // InternalTypeScript.g:574:1: rule__Greeting__ExpressionAssignment_1_0_0_0_1_0 : ( ruleExpression ) ;
-    public final void rule__Greeting__ExpressionAssignment_1_0_0_0_1_0() throws RecognitionException {
+    // $ANTLR start "rule__Compute__NameAssignment_1_0_2"
+    // InternalTypeScript.g:575:1: rule__Compute__NameAssignment_1_0_2 : ( RULE_TEXTOS ) ;
+    public final void rule__Compute__NameAssignment_1_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:578:1: ( ( ruleExpression ) )
-            // InternalTypeScript.g:579:2: ( ruleExpression )
+            // InternalTypeScript.g:579:1: ( ( RULE_TEXTOS ) )
+            // InternalTypeScript.g:580:2: ( RULE_TEXTOS )
             {
-            // InternalTypeScript.g:579:2: ( ruleExpression )
-            // InternalTypeScript.g:580:3: ruleExpression
+            // InternalTypeScript.g:580:2: ( RULE_TEXTOS )
+            // InternalTypeScript.g:581:3: RULE_TEXTOS
             {
-             before(grammarAccess.getGreetingAccess().getExpressionExpressionParserRuleCall_1_0_0_0_1_0_0()); 
-            pushFollow(FOLLOW_2);
-            ruleExpression();
-
-            state._fsp--;
-
-             after(grammarAccess.getGreetingAccess().getExpressionExpressionParserRuleCall_1_0_0_0_1_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__ExpressionAssignment_1_0_0_0_1_0"
-
-
-    // $ANTLR start "rule__Greeting__ExpressionAssignment_1_0_0_1_0"
-    // InternalTypeScript.g:589:1: rule__Greeting__ExpressionAssignment_1_0_0_1_0 : ( ruleExpression ) ;
-    public final void rule__Greeting__ExpressionAssignment_1_0_0_1_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:593:1: ( ( ruleExpression ) )
-            // InternalTypeScript.g:594:2: ( ruleExpression )
-            {
-            // InternalTypeScript.g:594:2: ( ruleExpression )
-            // InternalTypeScript.g:595:3: ruleExpression
-            {
-             before(grammarAccess.getGreetingAccess().getExpressionExpressionParserRuleCall_1_0_0_1_0_0()); 
-            pushFollow(FOLLOW_2);
-            ruleExpression();
-
-            state._fsp--;
-
-             after(grammarAccess.getGreetingAccess().getExpressionExpressionParserRuleCall_1_0_0_1_0_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__ExpressionAssignment_1_0_0_1_0"
-
-
-    // $ANTLR start "rule__Greeting__NameAssignment_1_0_2"
-    // InternalTypeScript.g:604:1: rule__Greeting__NameAssignment_1_0_2 : ( RULE_TEXTOS ) ;
-    public final void rule__Greeting__NameAssignment_1_0_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTypeScript.g:608:1: ( ( RULE_TEXTOS ) )
-            // InternalTypeScript.g:609:2: ( RULE_TEXTOS )
-            {
-            // InternalTypeScript.g:609:2: ( RULE_TEXTOS )
-            // InternalTypeScript.g:610:3: RULE_TEXTOS
-            {
-             before(grammarAccess.getGreetingAccess().getNameTEXTOSTerminalRuleCall_1_0_2_0()); 
+             before(grammarAccess.getComputeAccess().getNameTEXTOSTerminalRuleCall_1_0_2_0()); 
             match(input,RULE_TEXTOS,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getNameTEXTOSTerminalRuleCall_1_0_2_0()); 
+             after(grammarAccess.getComputeAccess().getNameTEXTOSTerminalRuleCall_1_0_2_0()); 
 
             }
 
@@ -1898,25 +1779,25 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__NameAssignment_1_0_2"
+    // $ANTLR end "rule__Compute__NameAssignment_1_0_2"
 
 
-    // $ANTLR start "rule__Greeting__NameAssignment_1_1"
-    // InternalTypeScript.g:619:1: rule__Greeting__NameAssignment_1_1 : ( RULE_TEXTOS ) ;
-    public final void rule__Greeting__NameAssignment_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Compute__NameAssignment_1_1"
+    // InternalTypeScript.g:590:1: rule__Compute__NameAssignment_1_1 : ( RULE_TEXTOS ) ;
+    public final void rule__Compute__NameAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTypeScript.g:623:1: ( ( RULE_TEXTOS ) )
-            // InternalTypeScript.g:624:2: ( RULE_TEXTOS )
+            // InternalTypeScript.g:594:1: ( ( RULE_TEXTOS ) )
+            // InternalTypeScript.g:595:2: ( RULE_TEXTOS )
             {
-            // InternalTypeScript.g:624:2: ( RULE_TEXTOS )
-            // InternalTypeScript.g:625:3: RULE_TEXTOS
+            // InternalTypeScript.g:595:2: ( RULE_TEXTOS )
+            // InternalTypeScript.g:596:3: RULE_TEXTOS
             {
-             before(grammarAccess.getGreetingAccess().getNameTEXTOSTerminalRuleCall_1_1_0()); 
+             before(grammarAccess.getComputeAccess().getNameTEXTOSTerminalRuleCall_1_1_0()); 
             match(input,RULE_TEXTOS,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getNameTEXTOSTerminalRuleCall_1_1_0()); 
+             after(grammarAccess.getComputeAccess().getNameTEXTOSTerminalRuleCall_1_1_0()); 
 
             }
 
@@ -1935,7 +1816,7 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__NameAssignment_1_1"
+    // $ANTLR end "rule__Compute__NameAssignment_1_1"
 
     // Delegated rules
 
@@ -1944,13 +1825,12 @@ public class InternalTypeScriptParser extends AbstractInternalContentAssistParse
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000007032L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000047070L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000087030L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000007032L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000047070L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000087030L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000100000L});
 
 }

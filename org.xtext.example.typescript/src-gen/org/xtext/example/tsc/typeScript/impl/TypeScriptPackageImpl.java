@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.xtext.example.tsc.typeScript.Greeting;
+import org.xtext.example.tsc.typeScript.Compute;
 import org.xtext.example.tsc.typeScript.Model;
 import org.xtext.example.tsc.typeScript.TypeScriptFactory;
 import org.xtext.example.tsc.typeScript.TypeScriptPackage;
@@ -35,7 +35,7 @@ public class TypeScriptPackageImpl extends EPackageImpl implements TypeScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass greetingEClass = null;
+  private EClass computeEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -115,7 +115,7 @@ public class TypeScriptPackageImpl extends EPackageImpl implements TypeScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Greetings()
+  public EReference getModel_Compute()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
   }
@@ -125,9 +125,9 @@ public class TypeScriptPackageImpl extends EPackageImpl implements TypeScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGreeting()
+  public EClass getCompute()
   {
-    return greetingEClass;
+    return computeEClass;
   }
 
   /**
@@ -135,9 +135,9 @@ public class TypeScriptPackageImpl extends EPackageImpl implements TypeScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGreeting_Expression()
+  public EAttribute getCompute_Expression()
   {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)computeEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -145,9 +145,9 @@ public class TypeScriptPackageImpl extends EPackageImpl implements TypeScriptPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGreeting_Name()
+  public EAttribute getCompute_Name()
   {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)computeEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -181,11 +181,11 @@ public class TypeScriptPackageImpl extends EPackageImpl implements TypeScriptPac
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__GREETINGS);
+    createEReference(modelEClass, MODEL__COMPUTE);
 
-    greetingEClass = createEClass(GREETING);
-    createEAttribute(greetingEClass, GREETING__EXPRESSION);
-    createEAttribute(greetingEClass, GREETING__NAME);
+    computeEClass = createEClass(COMPUTE);
+    createEAttribute(computeEClass, COMPUTE__EXPRESSION);
+    createEAttribute(computeEClass, COMPUTE__NAME);
   }
 
   /**
@@ -220,11 +220,11 @@ public class TypeScriptPackageImpl extends EPackageImpl implements TypeScriptPac
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Greetings(), this.getGreeting(), null, "greetings", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Compute(), this.getCompute(), null, "compute", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGreeting_Expression(), ecorePackage.getEString(), "expression", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(computeEClass, Compute.class, "Compute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCompute_Expression(), ecorePackage.getEString(), "expression", null, 0, 1, Compute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCompute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Compute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

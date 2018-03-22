@@ -3,21 +3,16 @@
  */
 package org.xtext.example.tsc.typeScript.impl;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.xtext.example.tsc.typeScript.Greeting;
+import org.xtext.example.tsc.typeScript.Compute;
 import org.xtext.example.tsc.typeScript.Model;
 import org.xtext.example.tsc.typeScript.TypeScriptPackage;
 
@@ -29,7 +24,7 @@ import org.xtext.example.tsc.typeScript.TypeScriptPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.tsc.typeScript.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link org.xtext.example.tsc.typeScript.impl.ModelImpl#getCompute <em>Compute</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,14 +32,14 @@ import org.xtext.example.tsc.typeScript.TypeScriptPackage;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference list.
+   * The cached value of the '{@link #getCompute() <em>Compute</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getCompute()
    * @generated
    * @ordered
    */
-  protected EList<Greeting> greetings;
+  protected Compute compute;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,13 +67,47 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Greeting> getGreetings()
+  public Compute getCompute()
   {
-    if (greetings == null)
+    return compute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetCompute(Compute newCompute, NotificationChain msgs)
+  {
+    Compute oldCompute = compute;
+    compute = newCompute;
+    if (eNotificationRequired())
     {
-      greetings = new EObjectContainmentEList<Greeting>(Greeting.class, this, TypeScriptPackage.MODEL__GREETINGS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, TypeScriptPackage.MODEL__COMPUTE, oldCompute, newCompute);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return greetings;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCompute(Compute newCompute)
+  {
+    if (newCompute != compute)
+    {
+      NotificationChain msgs = null;
+      if (compute != null)
+        msgs = ((InternalEObject)compute).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - TypeScriptPackage.MODEL__COMPUTE, null, msgs);
+      if (newCompute != null)
+        msgs = ((InternalEObject)newCompute).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - TypeScriptPackage.MODEL__COMPUTE, null, msgs);
+      msgs = basicSetCompute(newCompute, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, TypeScriptPackage.MODEL__COMPUTE, newCompute, newCompute));
   }
 
   /**
@@ -91,8 +120,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TypeScriptPackage.MODEL__GREETINGS:
-        return ((InternalEList<?>)getGreetings()).basicRemove(otherEnd, msgs);
+      case TypeScriptPackage.MODEL__COMPUTE:
+        return basicSetCompute(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -107,8 +136,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TypeScriptPackage.MODEL__GREETINGS:
-        return getGreetings();
+      case TypeScriptPackage.MODEL__COMPUTE:
+        return getCompute();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,15 +147,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case TypeScriptPackage.MODEL__GREETINGS:
-        getGreetings().clear();
-        getGreetings().addAll((Collection<? extends Greeting>)newValue);
+      case TypeScriptPackage.MODEL__COMPUTE:
+        setCompute((Compute)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -142,8 +169,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TypeScriptPackage.MODEL__GREETINGS:
-        getGreetings().clear();
+      case TypeScriptPackage.MODEL__COMPUTE:
+        setCompute((Compute)null);
         return;
     }
     super.eUnset(featureID);
@@ -159,8 +186,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TypeScriptPackage.MODEL__GREETINGS:
-        return greetings != null && !greetings.isEmpty();
+      case TypeScriptPackage.MODEL__COMPUTE:
+        return compute != null;
     }
     return super.eIsSet(featureID);
   }

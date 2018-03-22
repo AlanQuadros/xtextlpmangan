@@ -7,11 +7,11 @@
   <genPackages prefix="TypeScript" basePackage="org.xtext.example.tsc" disposableProviderFactory="true"
       fileExtensions="tsc" ecorePackage="TypeScript.ecore#/">
     <genClasses ecoreClass="TypeScript.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TypeScript.ecore#//Model/greetings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TypeScript.ecore#//Model/compute"/>
     </genClasses>
-    <genClasses ecoreClass="TypeScript.ecore#//Greeting">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TypeScript.ecore#//Greeting/expression"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TypeScript.ecore#//Greeting/name"/>
+    <genClasses ecoreClass="TypeScript.ecore#//Compute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TypeScript.ecore#//Compute/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TypeScript.ecore#//Compute/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

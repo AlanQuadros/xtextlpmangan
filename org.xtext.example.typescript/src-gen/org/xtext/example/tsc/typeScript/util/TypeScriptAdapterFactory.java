@@ -81,9 +81,9 @@ public class TypeScriptAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseGreeting(Greeting object)
+      public Adapter caseCompute(Compute object)
       {
-        return createGreetingAdapter();
+        return createComputeAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -123,16 +123,16 @@ public class TypeScriptAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.tsc.typeScript.Greeting <em>Greeting</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.tsc.typeScript.Compute <em>Compute</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.tsc.typeScript.Greeting
+   * @see org.xtext.example.tsc.typeScript.Compute
    * @generated
    */
-  public Adapter createGreetingAdapter()
+  public Adapter createComputeAdapter()
   {
     return null;
   }

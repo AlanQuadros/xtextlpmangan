@@ -11,9 +11,11 @@ import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Parameter;
 import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.serializer.ISerializationContext;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.example.tsc.services.TypeScriptGrammarAccess;
-import org.xtext.example.tsc.typeScript.Greeting;
+import org.xtext.example.tsc.typeScript.Compute;
 import org.xtext.example.tsc.typeScript.Model;
 import org.xtext.example.tsc.typeScript.TypeScriptPackage;
 
@@ -31,8 +33,8 @@ public class TypeScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == TypeScriptPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case TypeScriptPackage.GREETING:
-				sequence_Greeting(context, (Greeting) semanticObject); 
+			case TypeScriptPackage.COMPUTE:
+				sequence_Compute(context, (Compute) semanticObject); 
 				return; 
 			case TypeScriptPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
@@ -44,12 +46,12 @@ public class TypeScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Greeting returns Greeting
+	 *     Compute returns Compute
 	 *
 	 * Constraint:
-	 *     (((expression=Expression+ | expression=Expression+)? name=TEXTOS) | name=TEXTOS)
+	 *     (((expression=Classes+ | expression=Classes+)? name=TEXTOS) | name=TEXTOS)
 	 */
-	protected void sequence_Greeting(ISerializationContext context, Greeting semanticObject) {
+	protected void sequence_Compute(ISerializationContext context, Compute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -59,10 +61,16 @@ public class TypeScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     greetings+=Greeting+
+	 *     compute=Compute
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, TypeScriptPackage.Literals.MODEL__COMPUTE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TypeScriptPackage.Literals.MODEL__COMPUTE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getModelAccess().getComputeComputeParserRuleCall_0(), semanticObject.getCompute());
+		feeder.finish();
 	}
 	
 	
