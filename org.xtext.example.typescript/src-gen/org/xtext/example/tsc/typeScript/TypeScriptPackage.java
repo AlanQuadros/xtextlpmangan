@@ -68,13 +68,13 @@ public interface TypeScriptPackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Compute</b></em>' containment reference.
+   * The feature id for the '<em><b>Greetings</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__COMPUTE = 0;
+  int MODEL__GREETINGS = 0;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -86,14 +86,14 @@ public interface TypeScriptPackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.tsc.typeScript.impl.ComputeImpl <em>Compute</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.tsc.typeScript.impl.GreetingImpl <em>Greeting</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.tsc.typeScript.impl.ComputeImpl
-   * @see org.xtext.example.tsc.typeScript.impl.TypeScriptPackageImpl#getCompute()
+   * @see org.xtext.example.tsc.typeScript.impl.GreetingImpl
+   * @see org.xtext.example.tsc.typeScript.impl.TypeScriptPackageImpl#getGreeting()
    * @generated
    */
-  int COMPUTE = 1;
+  int GREETING = 1;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -102,7 +102,7 @@ public interface TypeScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTE__EXPRESSION = 0;
+  int GREETING__EXPRESSION = 0;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -111,16 +111,16 @@ public interface TypeScriptPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPUTE__NAME = 1;
+  int GREETING__NAME = 1;
 
   /**
-   * The number of structural features of the '<em>Compute</em>' class.
+   * The number of structural features of the '<em>Greeting</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPUTE_FEATURE_COUNT = 2;
+  int GREETING_FEATURE_COUNT = 2;
 
 
   /**
@@ -134,47 +134,47 @@ public interface TypeScriptPackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.tsc.typeScript.Model#getCompute <em>Compute</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.tsc.typeScript.Model#getGreetings <em>Greetings</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Compute</em>'.
-   * @see org.xtext.example.tsc.typeScript.Model#getCompute()
+   * @return the meta object for the containment reference list '<em>Greetings</em>'.
+   * @see org.xtext.example.tsc.typeScript.Model#getGreetings()
    * @see #getModel()
    * @generated
    */
-  EReference getModel_Compute();
+  EReference getModel_Greetings();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.tsc.typeScript.Compute <em>Compute</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.tsc.typeScript.Greeting <em>Greeting</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Compute</em>'.
-   * @see org.xtext.example.tsc.typeScript.Compute
+   * @return the meta object for class '<em>Greeting</em>'.
+   * @see org.xtext.example.tsc.typeScript.Greeting
    * @generated
    */
-  EClass getCompute();
+  EClass getGreeting();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.tsc.typeScript.Compute#getExpression <em>Expression</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.tsc.typeScript.Greeting#getExpression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Expression</em>'.
-   * @see org.xtext.example.tsc.typeScript.Compute#getExpression()
-   * @see #getCompute()
+   * @see org.xtext.example.tsc.typeScript.Greeting#getExpression()
+   * @see #getGreeting()
    * @generated
    */
-  EAttribute getCompute_Expression();
+  EAttribute getGreeting_Expression();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.tsc.typeScript.Compute#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.tsc.typeScript.Greeting#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.tsc.typeScript.Compute#getName()
-   * @see #getCompute()
+   * @see org.xtext.example.tsc.typeScript.Greeting#getName()
+   * @see #getGreeting()
    * @generated
    */
-  EAttribute getCompute_Name();
+  EAttribute getGreeting_Name();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -210,22 +210,22 @@ public interface TypeScriptPackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Compute</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__COMPUTE = eINSTANCE.getModel_Compute();
+    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.tsc.typeScript.impl.ComputeImpl <em>Compute</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.tsc.typeScript.impl.GreetingImpl <em>Greeting</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.tsc.typeScript.impl.ComputeImpl
-     * @see org.xtext.example.tsc.typeScript.impl.TypeScriptPackageImpl#getCompute()
+     * @see org.xtext.example.tsc.typeScript.impl.GreetingImpl
+     * @see org.xtext.example.tsc.typeScript.impl.TypeScriptPackageImpl#getGreeting()
      * @generated
      */
-    EClass COMPUTE = eINSTANCE.getCompute();
+    EClass GREETING = eINSTANCE.getGreeting();
 
     /**
      * The meta object literal for the '<em><b>Expression</b></em>' attribute feature.
@@ -233,7 +233,7 @@ public interface TypeScriptPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMPUTE__EXPRESSION = eINSTANCE.getCompute_Expression();
+    EAttribute GREETING__EXPRESSION = eINSTANCE.getGreeting_Expression();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -241,7 +241,7 @@ public interface TypeScriptPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute COMPUTE__NAME = eINSTANCE.getCompute_Name();
+    EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
 
   }
 

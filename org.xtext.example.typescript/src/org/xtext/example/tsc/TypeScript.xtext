@@ -3,15 +3,16 @@ grammar org.xtext.example.tsc.TypeScript with org.eclipse.xtext.common.Terminals
 generate typeScript "http://www.xtext.org/example/tsc/TypeScript"
 
 Model:
-	compute=Compute;
+	greetings+=Greeting*;
 	
-Compute:
-//	'import' '{' (expression=Expression(',')?)* '}' 'from' '[' '.'? '.'? (expression=Expression('/'?))* ']' ';' ;
-	'import' '{' (expression=Expression(',')?)* '}' 'from' name=STRING ';' ;
+Greeting:
+	'import' 
+		(('{' (expression=Expression (',')?)* '}' | (expression=Expression (',')?)*) 
+		'from' name=TEXTOS | name=TEXTOS)  (';')?;
 
 Expression:
-	INT | ID;	
+	INT | ID | ('as') | ('*') | ('$');
 	
-terminal STRING: 
+terminal TEXTOS: 
     '"' ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
     "'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";

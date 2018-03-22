@@ -19,9 +19,49 @@ class TypeScriptParsingTest {
 	ParseHelper<Model> parseHelper
 	
 	@Test
-	def void loadModel() {
+	def void exemploUm() {
 		val result = parseHelper.parse('''
-			import { a, b, c } from "../abc/asdas/asda/asdsad"; 
+			import { ZipCodeValidator } from "./ZipCodeValidator";
+		''')
+		Assert.assertNotNull(result)
+		val errors = result.eResource.errors
+		Assert.assertTrue('''Unexpected errors: «errors.join(", ")»''', errors.isEmpty)
+	}
+	
+	@Test
+	def void exemploDois() {
+		val result = parseHelper.parse('''
+			import { ZipCodeValidator as ZCV } from "./ZipCodeValidator";
+		''')
+		Assert.assertNotNull(result)
+		val errors = result.eResource.errors
+		Assert.assertTrue('''Unexpected errors: «errors.join(", ")»''', errors.isEmpty)
+	}
+	
+	@Test
+	def void exemploTres() {
+		val result = parseHelper.parse('''
+			import * as validator from "./ZipCodeValidator";
+		''')
+		Assert.assertNotNull(result)
+		val errors = result.eResource.errors
+		Assert.assertTrue('''Unexpected errors: «errors.join(", ")»''', errors.isEmpty)
+	}
+	
+	@Test
+	def void exemploQuatro() {
+		val result = parseHelper.parse('''
+			import "./my-module.js";
+		''')
+		Assert.assertNotNull(result)
+		val errors = result.eResource.errors
+		Assert.assertTrue('''Unexpected errors: «errors.join(", ")»''', errors.isEmpty)
+	}
+	
+	@Test
+	def void exemploCinco() {
+		val result = parseHelper.parse('''
+			import $ from "JQuery";
 		''')
 		Assert.assertNotNull(result)
 		val errors = result.eResource.errors

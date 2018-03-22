@@ -24,87 +24,129 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.Model");
-		private final Assignment cComputeAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cComputeComputeParserRuleCall_0 = (RuleCall)cComputeAssignment.eContents().get(0);
+		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
 		
 		//Model:
-		//	compute=Compute;
+		//	greetings+=Greeting*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//compute=Compute
-		public Assignment getComputeAssignment() { return cComputeAssignment; }
+		//greetings+=Greeting*
+		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
 		
-		//Compute
-		public RuleCall getComputeComputeParserRuleCall_0() { return cComputeComputeParserRuleCall_0; }
+		//Greeting
+		public RuleCall getGreetingsGreetingParserRuleCall_0() { return cGreetingsGreetingParserRuleCall_0; }
 	}
-	public class ComputeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.Compute");
+	public class GreetingElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.Greeting");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cImportKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Assignment cExpressionAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final RuleCall cExpressionExpressionParserRuleCall_2_0_0 = (RuleCall)cExpressionAssignment_2_0.eContents().get(0);
-		private final Keyword cCommaKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cFromKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cNameAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cNameSTRINGTerminalRuleCall_5_0 = (RuleCall)cNameAssignment_5.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Group cGroup_1_0 = (Group)cAlternatives_1.eContents().get(0);
+		private final Alternatives cAlternatives_1_0_0 = (Alternatives)cGroup_1_0.eContents().get(0);
+		private final Group cGroup_1_0_0_0 = (Group)cAlternatives_1_0_0.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1_0_0_0_0 = (Keyword)cGroup_1_0_0_0.eContents().get(0);
+		private final Group cGroup_1_0_0_0_1 = (Group)cGroup_1_0_0_0.eContents().get(1);
+		private final Assignment cExpressionAssignment_1_0_0_0_1_0 = (Assignment)cGroup_1_0_0_0_1.eContents().get(0);
+		private final RuleCall cExpressionExpressionParserRuleCall_1_0_0_0_1_0_0 = (RuleCall)cExpressionAssignment_1_0_0_0_1_0.eContents().get(0);
+		private final Keyword cCommaKeyword_1_0_0_0_1_1 = (Keyword)cGroup_1_0_0_0_1.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_1_0_0_0_2 = (Keyword)cGroup_1_0_0_0.eContents().get(2);
+		private final Group cGroup_1_0_0_1 = (Group)cAlternatives_1_0_0.eContents().get(1);
+		private final Assignment cExpressionAssignment_1_0_0_1_0 = (Assignment)cGroup_1_0_0_1.eContents().get(0);
+		private final RuleCall cExpressionExpressionParserRuleCall_1_0_0_1_0_0 = (RuleCall)cExpressionAssignment_1_0_0_1_0.eContents().get(0);
+		private final Keyword cCommaKeyword_1_0_0_1_1 = (Keyword)cGroup_1_0_0_1.eContents().get(1);
+		private final Keyword cFromKeyword_1_0_1 = (Keyword)cGroup_1_0.eContents().get(1);
+		private final Assignment cNameAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
+		private final RuleCall cNameTEXTOSTerminalRuleCall_1_0_2_0 = (RuleCall)cNameAssignment_1_0_2.eContents().get(0);
+		private final Assignment cNameAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final RuleCall cNameTEXTOSTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		//Compute: //	'import' '{' (expression=Expression(',')?)* '}' 'from' '[' '.'? '.'? (expression=Expression('/'?))* ']' ';' ;
-		//	'import' '{' (expression=Expression ','?)* '}' 'from' name=STRING ';';
+		//Greeting:
+		//	'import' (('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*)
+		//	'from' name=TEXTOS | name=TEXTOS) ';'?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		////	'import' '{' (expression=Expression(',')?)* '}' 'from' '[' '.'? '.'? (expression=Expression('/'?))* ']' ';' ;
-		//'import' '{' (expression=Expression ','?)* '}' 'from' name=STRING ';'
+		//'import' (('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*) 'from' name=TEXTOS | name=TEXTOS) ';'?
 		public Group getGroup() { return cGroup; }
 		
-		////	'import' '{' (expression=Expression(',')?)* '}' 'from' '[' '.'? '.'? (expression=Expression('/'?))* ']' ';' ;
 		//'import'
 		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
 		
+		//('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*) 'from' name=TEXTOS | name=TEXTOS
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		
+		//('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*) 'from' name=TEXTOS
+		public Group getGroup_1_0() { return cGroup_1_0; }
+		
+		//'{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*
+		public Alternatives getAlternatives_1_0_0() { return cAlternatives_1_0_0; }
+		
+		//'{' (expression=Expression ','?)* '}'
+		public Group getGroup_1_0_0_0() { return cGroup_1_0_0_0; }
+		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		public Keyword getLeftCurlyBracketKeyword_1_0_0_0_0() { return cLeftCurlyBracketKeyword_1_0_0_0_0; }
 		
 		//(expression=Expression ','?)*
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_1_0_0_0_1() { return cGroup_1_0_0_0_1; }
 		
 		//expression=Expression
-		public Assignment getExpressionAssignment_2_0() { return cExpressionAssignment_2_0; }
+		public Assignment getExpressionAssignment_1_0_0_0_1_0() { return cExpressionAssignment_1_0_0_0_1_0; }
 		
 		//Expression
-		public RuleCall getExpressionExpressionParserRuleCall_2_0_0() { return cExpressionExpressionParserRuleCall_2_0_0; }
+		public RuleCall getExpressionExpressionParserRuleCall_1_0_0_0_1_0_0() { return cExpressionExpressionParserRuleCall_1_0_0_0_1_0_0; }
 		
 		//','?
-		public Keyword getCommaKeyword_2_1() { return cCommaKeyword_2_1; }
+		public Keyword getCommaKeyword_1_0_0_0_1_1() { return cCommaKeyword_1_0_0_0_1_1; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+		public Keyword getRightCurlyBracketKeyword_1_0_0_0_2() { return cRightCurlyBracketKeyword_1_0_0_0_2; }
+		
+		//(expression=Expression ','?)*
+		public Group getGroup_1_0_0_1() { return cGroup_1_0_0_1; }
+		
+		//expression=Expression
+		public Assignment getExpressionAssignment_1_0_0_1_0() { return cExpressionAssignment_1_0_0_1_0; }
+		
+		//Expression
+		public RuleCall getExpressionExpressionParserRuleCall_1_0_0_1_0_0() { return cExpressionExpressionParserRuleCall_1_0_0_1_0_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_1_0_0_1_1() { return cCommaKeyword_1_0_0_1_1; }
 		
 		//'from'
-		public Keyword getFromKeyword_4() { return cFromKeyword_4; }
+		public Keyword getFromKeyword_1_0_1() { return cFromKeyword_1_0_1; }
 		
-		//name=STRING
-		public Assignment getNameAssignment_5() { return cNameAssignment_5; }
+		//name=TEXTOS
+		public Assignment getNameAssignment_1_0_2() { return cNameAssignment_1_0_2; }
 		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_5_0() { return cNameSTRINGTerminalRuleCall_5_0; }
+		//TEXTOS
+		public RuleCall getNameTEXTOSTerminalRuleCall_1_0_2_0() { return cNameTEXTOSTerminalRuleCall_1_0_2_0; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		//name=TEXTOS
+		public Assignment getNameAssignment_1_1() { return cNameAssignment_1_1; }
+		
+		//TEXTOS
+		public RuleCall getNameTEXTOSTerminalRuleCall_1_1_0() { return cNameTEXTOSTerminalRuleCall_1_1_0; }
+		
+		//';'?
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 	public class ExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.Expression");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cINTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Keyword cAsKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		private final Keyword cAsteriskKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cDollarSignKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
 		
 		//Expression:
-		//	INT | ID;
+		//	INT | ID | 'as' | '*' | '$';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//INT | ID
+		//INT | ID | 'as' | '*' | '$'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//INT
@@ -112,13 +154,22 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ID
 		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+		
+		//'as'
+		public Keyword getAsKeyword_2() { return cAsKeyword_2; }
+		
+		//'*'
+		public Keyword getAsteriskKeyword_3() { return cAsteriskKeyword_3; }
+		
+		//'$'
+		public Keyword getDollarSignKeyword_4() { return cDollarSignKeyword_4; }
 	}
 	
 	
 	private final ModelElements pModel;
-	private final ComputeElements pCompute;
+	private final GreetingElements pGreeting;
 	private final ExpressionElements pExpression;
-	private final TerminalRule tSTRING;
+	private final TerminalRule tTEXTOS;
 	
 	private final Grammar grammar;
 	
@@ -130,9 +181,9 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.pCompute = new ComputeElements();
+		this.pGreeting = new GreetingElements();
 		this.pExpression = new ExpressionElements();
-		this.tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.STRING");
+		this.tTEXTOS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.tsc.TypeScript.TEXTOS");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -163,7 +214,7 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	compute=Compute;
+	//	greetings+=Greeting*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -172,18 +223,19 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 	
-	//Compute: //	'import' '{' (expression=Expression(',')?)* '}' 'from' '[' '.'? '.'? (expression=Expression('/'?))* ']' ';' ;
-	//	'import' '{' (expression=Expression ','?)* '}' 'from' name=STRING ';';
-	public ComputeElements getComputeAccess() {
-		return pCompute;
+	//Greeting:
+	//	'import' (('{' (expression=Expression ','?)* '}' | (expression=Expression ','?)*)
+	//	'from' name=TEXTOS | name=TEXTOS) ';'?;
+	public GreetingElements getGreetingAccess() {
+		return pGreeting;
 	}
 	
-	public ParserRule getComputeRule() {
-		return getComputeAccess().getRule();
+	public ParserRule getGreetingRule() {
+		return getGreetingAccess().getRule();
 	}
 	
 	//Expression:
-	//	INT | ID;
+	//	INT | ID | 'as' | '*' | '$';
 	public ExpressionElements getExpressionAccess() {
 		return pExpression;
 	}
@@ -192,11 +244,11 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		return getExpressionAccess().getRule();
 	}
 	
-	//terminal STRING:
+	//terminal TEXTOS:
 	//	'"' ('\\' ('b' | 't' | 'n' | 'f' | 'r' | 'u' | '"' | "'" | '\\') | !('\\' | '"'))* '"' |
 	//	"'" ('\\' ('b' | 't' | 'n' | 'f' | 'r' | 'u' | '"' | "'" | '\\') | !('\\' | "'"))* "'";
-	public TerminalRule getSTRINGRule() {
-		return tSTRING;
+	public TerminalRule getTEXTOSRule() {
+		return tTEXTOS;
 	}
 	
 	//terminal ID:
@@ -209,6 +261,13 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 	//	'0'..'9'+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
+	}
+	
+	//terminal STRING:
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
+	public TerminalRule getSTRINGRule() {
+		return gaTerminals.getSTRINGRule();
 	}
 	
 	//terminal ML_COMMENT:

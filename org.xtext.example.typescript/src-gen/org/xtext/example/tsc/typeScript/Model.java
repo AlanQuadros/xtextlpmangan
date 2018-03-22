@@ -3,6 +3,8 @@
  */
 package org.xtext.example.tsc.typeScript;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.tsc.typeScript.Model#getCompute <em>Compute</em>}</li>
+ *   <li>{@link org.xtext.example.tsc.typeScript.Model#getGreetings <em>Greetings</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.tsc.typeScript.TypeScriptPackage#getModel()
@@ -24,29 +26,19 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Compute</b></em>' containment reference.
+   * Returns the value of the '<em><b>Greetings</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.tsc.typeScript.Greeting}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Compute</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Greetings</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Compute</em>' containment reference.
-   * @see #setCompute(Compute)
-   * @see org.xtext.example.tsc.typeScript.TypeScriptPackage#getModel_Compute()
+   * @return the value of the '<em>Greetings</em>' containment reference list.
+   * @see org.xtext.example.tsc.typeScript.TypeScriptPackage#getModel_Greetings()
    * @model containment="true"
    * @generated
    */
-  Compute getCompute();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.tsc.typeScript.Model#getCompute <em>Compute</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Compute</em>' containment reference.
-   * @see #getCompute()
-   * @generated
-   */
-  void setCompute(Compute value);
+  EList<Greeting> getGreetings();
 
 } // Model

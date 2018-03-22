@@ -1,9 +1,0 @@
-grammar org.xtext.example.sh.Shellscript with org.eclipse.xtext.common.Terminals
-
-generate shellscript "http://www.xtext.org/example/sh/Shellscript"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';

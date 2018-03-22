@@ -33,13 +33,13 @@ public interface TypeScriptFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Compute</em>'.
+   * Returns a new object of class '<em>Greeting</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Compute</em>'.
+   * @return a new object of class '<em>Greeting</em>'.
    * @generated
    */
-  Compute createCompute();
+  Greeting createGreeting();
 
   /**
    * Returns the package supported by this factory.

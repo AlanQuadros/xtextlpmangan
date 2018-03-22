@@ -10,6 +10,7 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -20,12 +21,18 @@ import org.xtext.example.tsc.services.TypeScriptGrammarAccess;
 public class TypeScriptSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected TypeScriptGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Compute_CommaKeyword_2_1_q;
+	protected AbstractElementAlias match_Greeting_CommaKeyword_1_0_0_0_1_1_q;
+	protected AbstractElementAlias match_Greeting_CommaKeyword_1_0_0_1_1_q;
+	protected AbstractElementAlias match_Greeting_SemicolonKeyword_2_q;
+	protected AbstractElementAlias match_Greeting___LeftCurlyBracketKeyword_1_0_0_0_0_RightCurlyBracketKeyword_1_0_0_0_2__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (TypeScriptGrammarAccess) access;
-		match_Compute_CommaKeyword_2_1_q = new TokenAlias(false, true, grammarAccess.getComputeAccess().getCommaKeyword_2_1());
+		match_Greeting_CommaKeyword_1_0_0_0_1_1_q = new TokenAlias(false, true, grammarAccess.getGreetingAccess().getCommaKeyword_1_0_0_0_1_1());
+		match_Greeting_CommaKeyword_1_0_0_1_1_q = new TokenAlias(false, true, grammarAccess.getGreetingAccess().getCommaKeyword_1_0_0_1_1());
+		match_Greeting_SemicolonKeyword_2_q = new TokenAlias(false, true, grammarAccess.getGreetingAccess().getSemicolonKeyword_2());
+		match_Greeting___LeftCurlyBracketKeyword_1_0_0_0_0_RightCurlyBracketKeyword_1_0_0_0_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getGreetingAccess().getLeftCurlyBracketKeyword_1_0_0_0_0()), new TokenAlias(false, false, grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_1_0_0_0_2()));
 	}
 	
 	@Override
@@ -40,8 +47,14 @@ public class TypeScriptSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Compute_CommaKeyword_2_1_q.equals(syntax))
-				emit_Compute_CommaKeyword_2_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Greeting_CommaKeyword_1_0_0_0_1_1_q.equals(syntax))
+				emit_Greeting_CommaKeyword_1_0_0_0_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Greeting_CommaKeyword_1_0_0_1_1_q.equals(syntax))
+				emit_Greeting_CommaKeyword_1_0_0_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Greeting_SemicolonKeyword_2_q.equals(syntax))
+				emit_Greeting_SemicolonKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Greeting___LeftCurlyBracketKeyword_1_0_0_0_0_RightCurlyBracketKeyword_1_0_0_0_2__q.equals(syntax))
+				emit_Greeting___LeftCurlyBracketKeyword_1_0_0_0_0_RightCurlyBracketKeyword_1_0_0_0_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -51,10 +64,44 @@ public class TypeScriptSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     expression=Expression (ambiguity) '}' 'from' name=STRING
+	 *     expression=Expression (ambiguity) '}' 'from' name=TEXTOS
 	 *     expression=Expression (ambiguity) expression=Expression
 	 */
-	protected void emit_Compute_CommaKeyword_2_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Greeting_CommaKeyword_1_0_0_0_1_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     expression=Expression (ambiguity) 'from' name=TEXTOS
+	 *     expression=Expression (ambiguity) expression=Expression
+	 */
+	protected void emit_Greeting_CommaKeyword_1_0_0_1_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ';'?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name=TEXTOS (ambiguity) (rule end)
+	 */
+	protected void emit_Greeting_SemicolonKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('{' '}')?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) 'import' (ambiguity) 'from' name=TEXTOS
+	 */
+	protected void emit_Greeting___LeftCurlyBracketKeyword_1_0_0_0_0_RightCurlyBracketKeyword_1_0_0_0_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
