@@ -219,7 +219,7 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCompute"
-    // InternalTypeScript.g:107:1: ruleCompute returns [EObject current=null] : (otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )? ) ;
+    // InternalTypeScript.g:107:1: ruleCompute returns [EObject current=null] : (otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )? ) ;
     public final EObject ruleCompute() throws RecognitionException {
         EObject current = null;
 
@@ -239,21 +239,21 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTypeScript.g:113:2: ( (otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )? ) )
-            // InternalTypeScript.g:114:2: (otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )? )
+            // InternalTypeScript.g:113:2: ( (otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )? ) )
+            // InternalTypeScript.g:114:2: (otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )? )
             {
-            // InternalTypeScript.g:114:2: (otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )? )
-            // InternalTypeScript.g:115:3: otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )?
+            // InternalTypeScript.g:114:2: (otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )? )
+            // InternalTypeScript.g:115:3: otherlv_0= 'import' ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) ) (otherlv_8= ';' )?
             {
             otherlv_0=(Token)match(input,12,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getComputeAccess().getImportKeyword_0());
             		
-            // InternalTypeScript.g:119:3: ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) )
+            // InternalTypeScript.g:119:3: ( ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) ) | ( (lv_name_7_0= RULE_TEXTOS ) ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( ((LA4_0>=RULE_INT && LA4_0<=RULE_ID)||LA4_0==13||LA4_0==15||(LA4_0>=18 && LA4_0<=20)) ) {
+            if ( ((LA4_0>=RULE_INT && LA4_0<=RULE_ID)||LA4_0==13||(LA4_0>=18 && LA4_0<=20)) ) {
                 alt4=1;
             }
             else if ( (LA4_0==RULE_TEXTOS) ) {
@@ -267,19 +267,19 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // InternalTypeScript.g:120:4: ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) )
+                    // InternalTypeScript.g:120:4: ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) )
                     {
-                    // InternalTypeScript.g:120:4: ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) )
-                    // InternalTypeScript.g:121:5: ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) )
+                    // InternalTypeScript.g:120:4: ( ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) ) )
+                    // InternalTypeScript.g:121:5: ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ ) otherlv_5= 'from' ( (lv_name_6_0= RULE_TEXTOS ) )
                     {
-                    // InternalTypeScript.g:121:5: ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )* )
+                    // InternalTypeScript.g:121:5: ( (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' ) | ( (lv_expression_4_0= ruleClasses ) )+ )
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
                     if ( (LA3_0==13) ) {
                         alt3=1;
                     }
-                    else if ( ((LA3_0>=RULE_INT && LA3_0<=RULE_ID)||LA3_0==15||(LA3_0>=18 && LA3_0<=20)) ) {
+                    else if ( ((LA3_0>=RULE_INT && LA3_0<=RULE_ID)||(LA3_0>=18 && LA3_0<=20)) ) {
                         alt3=2;
                     }
                     else {
@@ -290,16 +290,17 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt3) {
                         case 1 :
-                            // InternalTypeScript.g:122:6: (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' )
+                            // InternalTypeScript.g:122:6: (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' )
                             {
-                            // InternalTypeScript.g:122:6: (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}' )
-                            // InternalTypeScript.g:123:7: otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )* otherlv_3= '}'
+                            // InternalTypeScript.g:122:6: (otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}' )
+                            // InternalTypeScript.g:123:7: otherlv_1= '{' ( (lv_expression_2_0= ruleClasses ) )+ otherlv_3= '}'
                             {
                             otherlv_1=(Token)match(input,13,FOLLOW_4); 
 
                             							newLeafNode(otherlv_1, grammarAccess.getComputeAccess().getLeftCurlyBracketKeyword_1_0_0_0_0());
                             						
-                            // InternalTypeScript.g:127:7: ( (lv_expression_2_0= ruleClasses ) )*
+                            // InternalTypeScript.g:127:7: ( (lv_expression_2_0= ruleClasses ) )+
+                            int cnt1=0;
                             loop1:
                             do {
                                 int alt1=2;
@@ -320,7 +321,7 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
 
                             	    									newCompositeNode(grammarAccess.getComputeAccess().getExpressionClassesParserRuleCall_1_0_0_0_1_0());
                             	    								
-                            	    pushFollow(FOLLOW_4);
+                            	    pushFollow(FOLLOW_5);
                             	    lv_expression_2_0=ruleClasses();
 
                             	    state._fsp--;
@@ -344,11 +345,15 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
                             	    break;
 
                             	default :
-                            	    break loop1;
+                            	    if ( cnt1 >= 1 ) break loop1;
+                                        EarlyExitException eee =
+                                            new EarlyExitException(1, input);
+                                        throw eee;
                                 }
+                                cnt1++;
                             } while (true);
 
-                            otherlv_3=(Token)match(input,14,FOLLOW_5); 
+                            otherlv_3=(Token)match(input,14,FOLLOW_6); 
 
                             							newLeafNode(otherlv_3, grammarAccess.getComputeAccess().getRightCurlyBracketKeyword_1_0_0_0_2());
                             						
@@ -359,9 +364,10 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // InternalTypeScript.g:152:6: ( (lv_expression_4_0= ruleClasses ) )*
+                            // InternalTypeScript.g:152:6: ( (lv_expression_4_0= ruleClasses ) )+
                             {
-                            // InternalTypeScript.g:152:6: ( (lv_expression_4_0= ruleClasses ) )*
+                            // InternalTypeScript.g:152:6: ( (lv_expression_4_0= ruleClasses ) )+
+                            int cnt2=0;
                             loop2:
                             do {
                                 int alt2=2;
@@ -382,7 +388,7 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
 
                             	    								newCompositeNode(grammarAccess.getComputeAccess().getExpressionClassesParserRuleCall_1_0_0_1_0());
                             	    							
-                            	    pushFollow(FOLLOW_6);
+                            	    pushFollow(FOLLOW_7);
                             	    lv_expression_4_0=ruleClasses();
 
                             	    state._fsp--;
@@ -406,8 +412,12 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
                             	    break;
 
                             	default :
-                            	    break loop2;
+                            	    if ( cnt2 >= 1 ) break loop2;
+                                        EarlyExitException eee =
+                                            new EarlyExitException(2, input);
+                                        throw eee;
                                 }
+                                cnt2++;
                             } while (true);
 
 
@@ -416,7 +426,7 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_5=(Token)match(input,15,FOLLOW_7); 
+                    otherlv_5=(Token)match(input,15,FOLLOW_8); 
 
                     					newLeafNode(otherlv_5, grammarAccess.getComputeAccess().getFromKeyword_1_0_1());
                     				
@@ -426,7 +436,7 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
                     // InternalTypeScript.g:177:6: (lv_name_6_0= RULE_TEXTOS )
                     // InternalTypeScript.g:178:7: lv_name_6_0= RULE_TEXTOS
                     {
-                    lv_name_6_0=(Token)match(input,RULE_TEXTOS,FOLLOW_8); 
+                    lv_name_6_0=(Token)match(input,RULE_TEXTOS,FOLLOW_9); 
 
                     							newLeafNode(lv_name_6_0, grammarAccess.getComputeAccess().getNameTEXTOSTerminalRuleCall_1_0_2_0());
                     						
@@ -461,7 +471,7 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
                     // InternalTypeScript.g:197:5: (lv_name_7_0= RULE_TEXTOS )
                     // InternalTypeScript.g:198:6: lv_name_7_0= RULE_TEXTOS
                     {
-                    lv_name_7_0=(Token)match(input,RULE_TEXTOS,FOLLOW_8); 
+                    lv_name_7_0=(Token)match(input,RULE_TEXTOS,FOLLOW_9); 
 
                     						newLeafNode(lv_name_7_0, grammarAccess.getComputeAccess().getNameTEXTOSTerminalRuleCall_1_1_0());
                     					
@@ -588,7 +598,7 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
 
             			newCompositeNode(grammarAccess.getClassesAccess().getExpressionParserRuleCall_0());
             		
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_10);
             this_Expression_0=ruleExpression();
 
             state._fsp--;
@@ -818,12 +828,13 @@ public class InternalTypeScriptParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x00000000001CA070L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x00000000001C4060L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x00000000001C8060L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x00000000001C2070L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x00000000001C2060L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x00000000001C6060L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x00000000001CA060L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000020002L});
 
 }

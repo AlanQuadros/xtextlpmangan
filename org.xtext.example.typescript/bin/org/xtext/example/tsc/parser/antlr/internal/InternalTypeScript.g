@@ -142,7 +142,7 @@ ruleCompute returns [EObject current=null]
 									afterParserOrEnumRuleCall();
 								}
 							)
-						)*
+						)+
 						otherlv_3='}'
 						{
 							newLeafNode(otherlv_3, grammarAccess.getComputeAccess().getRightCurlyBracketKeyword_1_0_0_0_2());
@@ -167,7 +167,7 @@ ruleCompute returns [EObject current=null]
 								afterParserOrEnumRuleCall();
 							}
 						)
-					)*
+					)+
 				)
 				otherlv_5='from'
 				{

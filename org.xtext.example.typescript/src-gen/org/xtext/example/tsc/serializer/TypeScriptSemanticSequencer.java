@@ -49,7 +49,7 @@ public class TypeScriptSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Compute returns Compute
 	 *
 	 * Constraint:
-	 *     (((expression=Classes+ | expression=Classes+)? name=TEXTOS) | name=TEXTOS)
+	 *     (((expression=Classes+ | expression=Classes+) name=TEXTOS) | name=TEXTOS)
 	 */
 	protected void sequence_Compute(ISerializationContext context, Compute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -182,9 +182,16 @@ rule__Compute__Alternatives_1_0_0
 	)
 	|
 	(
-		{ before(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_1()); }
-		(rule__Compute__ExpressionAssignment_1_0_0_1)*
-		{ after(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_1()); }
+		(
+			{ before(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_1()); }
+			(rule__Compute__ExpressionAssignment_1_0_0_1)
+			{ after(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_1()); }
+		)
+		(
+			{ before(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_1()); }
+			(rule__Compute__ExpressionAssignment_1_0_0_1)*
+			{ after(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_1()); }
+		)
 	)
 ;
 finally {
@@ -437,9 +444,16 @@ rule__Compute__Group_1_0_0_0__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_0_1()); }
-	(rule__Compute__ExpressionAssignment_1_0_0_0_1)*
-	{ after(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_0_1()); }
+	(
+		{ before(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_0_1()); }
+		(rule__Compute__ExpressionAssignment_1_0_0_0_1)
+		{ after(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_0_1()); }
+	)
+	(
+		{ before(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_0_1()); }
+		(rule__Compute__ExpressionAssignment_1_0_0_0_1)*
+		{ after(grammarAccess.getComputeAccess().getExpressionAssignment_1_0_0_0_1()); }
+	)
 )
 ;
 finally {

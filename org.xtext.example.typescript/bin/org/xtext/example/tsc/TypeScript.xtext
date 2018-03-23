@@ -6,7 +6,7 @@ Model:
 	compute=Compute;
 	
 Compute:
-	'import' (('{' (expression=Classes)* '}' | (expression=Classes)*) 'from' name=TEXTOS | name=TEXTOS)  (';')?;
+	'import' (('{' (expression=Classes)+ '}' | (expression=Classes)+) 'from' name=TEXTOS | name=TEXTOS)  (';')?;
 
 Classes:
 	(Expression (',')?);

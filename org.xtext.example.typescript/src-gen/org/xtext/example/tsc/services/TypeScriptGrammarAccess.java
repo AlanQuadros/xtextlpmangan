@@ -59,31 +59,31 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Compute:
-		//	'import' (('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS | name=TEXTOS) ';'?;
+		//	'import' (('{' expression=Classes+ '}' | expression=Classes+) 'from' name=TEXTOS | name=TEXTOS) ';'?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'import' (('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS | name=TEXTOS) ';'?
+		//'import' (('{' expression=Classes+ '}' | expression=Classes+) 'from' name=TEXTOS | name=TEXTOS) ';'?
 		public Group getGroup() { return cGroup; }
 		
 		//'import'
 		public Keyword getImportKeyword_0() { return cImportKeyword_0; }
 		
-		//('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS | name=TEXTOS
+		//('{' expression=Classes+ '}' | expression=Classes+) 'from' name=TEXTOS | name=TEXTOS
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 		
-		//('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS
+		//('{' expression=Classes+ '}' | expression=Classes+) 'from' name=TEXTOS
 		public Group getGroup_1_0() { return cGroup_1_0; }
 		
-		//'{' expression=Classes* '}' | expression=Classes*
+		//'{' expression=Classes+ '}' | expression=Classes+
 		public Alternatives getAlternatives_1_0_0() { return cAlternatives_1_0_0; }
 		
-		//'{' expression=Classes* '}'
+		//'{' expression=Classes+ '}'
 		public Group getGroup_1_0_0_0() { return cGroup_1_0_0_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1_0_0_0_0() { return cLeftCurlyBracketKeyword_1_0_0_0_0; }
 		
-		//expression=Classes*
+		//expression=Classes+
 		public Assignment getExpressionAssignment_1_0_0_0_1() { return cExpressionAssignment_1_0_0_0_1; }
 		
 		//Classes
@@ -92,7 +92,7 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_1_0_0_0_2() { return cRightCurlyBracketKeyword_1_0_0_0_2; }
 		
-		//expression=Classes*
+		//expression=Classes+
 		public Assignment getExpressionAssignment_1_0_0_1() { return cExpressionAssignment_1_0_0_1; }
 		
 		//Classes
@@ -228,7 +228,7 @@ public class TypeScriptGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Compute:
-	//	'import' (('{' expression=Classes* '}' | expression=Classes*) 'from' name=TEXTOS | name=TEXTOS) ';'?;
+	//	'import' (('{' expression=Classes+ '}' | expression=Classes+) 'from' name=TEXTOS | name=TEXTOS) ';'?;
 	public ComputeElements getComputeAccess() {
 		return pCompute;
 	}
